@@ -1,31 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import LoadingBar from 'react-top-loading-bar';
 import simpleParallax from 'simple-parallax-js';
 import AnimationHero from '../AnimationHero/AnimationHero';
 import SelectedWork from '../SelectedWork/SelectedWork';
-import 'atropos/css'
-import './Home.css';
-
-import arrow from '../../images/arrow.svg';
-import hero_me from '../../images/hero_me.webp';
-import ellipse_1 from '../../images/ellipse_1.webp';
-import hero_light from '../../images/hero_light.webp';
-import selected_work from '../../images/selected_work.webp';
-import mechanical_software_arrow from '../../images/mechanical_software_arrow.svg';
 import {
     follow_me,
     homeHeroHeading,
     languages,
     mechanical_software,
     scrollToTop,
-    selectedWork
+    selectedWork,
+    loadTopBar,
+    animationBoxId
 } from '../Details';
+import 'atropos/css'
+import './Home.css';
+import arrow from '../../images/arrow.svg';
+import hero_me from '../../images/hero_me.webp';
+import ellipse_1 from '../../images/ellipse_1.webp';
+import hero_light from '../../images/hero_light.webp';
+import selected_work from '../../images/selected_work.webp';
+import mechanical_software_arrow from '../../images/mechanical_software_arrow.svg';
 
 
 function Home() {
 
+    const [progress, setProgress] = useState(0);
+
     useEffect(() => {
         scrollToTop();
+        loadTopBar(setProgress, 70, 500);
     }, []);
 
     const image = document.getElementsByClassName('selected_work');
@@ -36,7 +41,15 @@ function Home() {
 
     return (
         <>
-            <AnimationHero hero={hero_light} text={homeHeroHeading} to={'section_2'} />
+            <LoadingBar
+                height={2}
+                color='#f11946'
+                loaderSpeed={450}
+                progress={progress}
+            />
+
+            <AnimationHero hero={hero_light} text={homeHeroHeading} to={'section_2'} arrow={arrow} />
+
             <section id='section_2' className='section_2'>
                 <img className='ellipse_1' src={ellipse_1} alt="background" />
                 <div className='section_2_inner'>
@@ -129,12 +142,9 @@ function Home() {
                 <div className='animation_mechanical_software_container'>
                     <div id="wrapper">
                         <div className="box-area">
-                            <div id="box-front" className="box"></div>
-                            <div id="box-right" className="box"></div>
-                            <div id="box-back" className="box"></div>
-                            <div id="box-left" className="box"></div>
-                            <div id="box-top" className="box"></div>
-                            <div id="box-bottom" className="box"></div>
+                            {
+                                animationBoxId.map(id => <div id={id} className="box"></div>)
+                            }
                         </div>
                     </div>
                     <div></div>

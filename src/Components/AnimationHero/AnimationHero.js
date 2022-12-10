@@ -1,10 +1,9 @@
 import React from 'react';
-import './AnimationHero.css';
 import Atropos from 'atropos';
-import arrow from '../../images/arrow.svg';
 import { Link } from 'react-scroll'
+import './AnimationHero.css';
 
-function AnimationHero({ hero, text, to }) {
+function AnimationHero({ hero, text, to, arrow }) {
 
     const myAtropos = Atropos({
         el: '.my-atropos',
@@ -28,7 +27,7 @@ function AnimationHero({ hero, text, to }) {
                 </div>
             </div>
 
-            {/* THIS IS REACT SCROLL LINK FOR SMOOTH SCROLL */}
+            {/* THIS IS 'REACT SCROLL' LINK FOR SMOOTH SCROLL */}
             <Link to={to} smooth={true} duration={500}>
                 <img className='animation_arrow' src={arrow} alt='arrow' />
             </Link>

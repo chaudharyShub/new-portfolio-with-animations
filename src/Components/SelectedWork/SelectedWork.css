@@ -81,9 +81,11 @@
     transform: rotate(-90deg);
     width: 1.5em;
     display: none;
+    transition: 0.3s ease;
 }
 
 @media only screen and (min-width: 640px) {
+
     .work_right_arrow {
         display: block;
         position: absolute;
@@ -101,6 +103,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
+    
     .work {
         padding: 100px 5rem 100px 0;
     }
@@ -134,7 +137,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
-    
+
     .work_right_arrow {
         right: -100%;
     }

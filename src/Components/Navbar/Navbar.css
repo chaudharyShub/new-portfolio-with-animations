@@ -19,7 +19,6 @@
     color: #1D8BCF;
     width: auto;
     z-index: 10;
-    /* border: 1px solid black; */
 }
 
 .desktop_nav {
@@ -153,12 +152,15 @@ nav ul button {
     }
 
     .desktop_nav {
-        /* border: 1px solid black; */
         display: flex;
         width: 100%;
         justify-content: space-between;
         padding-right: 40px;
         padding: 10px 0;
+    }
+
+    .desktop_nav {
+        padding-right: 60px;
     }
 
     .nav_main>a {

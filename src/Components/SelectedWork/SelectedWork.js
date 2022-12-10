@@ -1,15 +1,8 @@
 import React from 'react';
 import './SelectedWork.css';
 import arrow from '../../images/arrow.svg';
-// import simpleParallax from 'simple-parallax-js';
 
 function SelectedWork({ id, name, img, link }) {
-
-    // var image = document.getElementsByClassName('thumbnail');
-    // new simpleParallax(image, {
-    //     delay: .3,
-    //     transition: 'cubic-bezier(0,0,0,1)'
-    // });
 
     return (
         <div className='work_container'>

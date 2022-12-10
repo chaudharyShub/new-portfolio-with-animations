@@ -1,4 +1,21 @@
 .work_main {
-    border: 1px solid black;
-    height: 100vh;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.work_main>a,
+.work_main>p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.active {
+    border-bottom: 1.5px solid #1D8BCF;
+}
+
+.work_main p {
+    margin: 0 10px;
 }

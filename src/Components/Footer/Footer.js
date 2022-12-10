@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import SimpleParallax from 'simple-parallax-js';
+import emailjs from '@emailjs/browser';
 import arrow from '../../images/arrow.svg';
 import footer_parallax from '../../images/footer_parallax.webp';
 import './Footer.css';
 
 function Footer() {
+
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_8akr5tv', 'template_e82dyaj', form.current, '7ARg-ncbFIkKGt125')
+            .then(() => {
+                alert('SUCCESS! Your form has been submitted.');
+            });
+        e.target.reset();
+    }
 
     const socialMedia = ['Facebook', 'Instagram', 'LinkedIn', 'Github', 'Whatsapp'];
     const image = document.getElementsByClassName('selected_work_footer');
@@ -29,14 +40,11 @@ function Footer() {
             </div>
             <div className='form_social_container'>
                 <div className="form_container">
-                    <form onSubmit={e => {
-                        console.log('hello');
-                        e.preventDefault();
-                    }}>
+                    <form onSubmit={sendEmail} ref={form}>
                         <h3>send email</h3>
-                        <input type="text" placeholder='Enter full name' required />
-                        <input type="email" placeholder='Enter your email' required />
-                        <textarea type="text" placeholder='Enter message' required />
+                        <input type="text" name='name' placeholder='Enter full name' required />
+                        <input type="email" name='email' placeholder='Enter your email' required />
+                        <textarea type="text" name='message' placeholder='Enter message' required />
                         <button type='submit'>
                             Submit
                             <img id='submit_arrow' className='submit_arrow' src={arrow} alt='arrow' />

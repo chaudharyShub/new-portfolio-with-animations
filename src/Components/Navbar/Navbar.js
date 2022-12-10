@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './Navbar.css';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 import dark_mode from '../../images/dark_mode.png';
 
 function Navbar() {
@@ -40,9 +40,11 @@ function Navbar() {
                 <nav>
                     <ul onClick={show}>
                         {navItems.map(items =>
-                            <li key={items}>
-                                <Link to={`${items}`}>{items}</Link>
-                            </li>
+                            <Link key={items} to={`${items}`}>
+                                <li >
+                                    {items}
+                                </li>
+                            </Link>
                         )}
                         <li><button>dark mode</button></li>
                     </ul>
