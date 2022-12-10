@@ -143,7 +143,7 @@ function Home() {
                     <div id="wrapper">
                         <div className="box-area">
                             {
-                                animationBoxId.map(id => <div id={id} className="box"></div>)
+                                animationBoxId.map(id => <div key={id} id={id} className="box"></div>)
                             }
                         </div>
                     </div>
