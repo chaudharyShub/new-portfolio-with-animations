@@ -1,0 +1,141 @@
+.work_container {
+    width: 100%;
+}
+
+.work {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid #1D8BCF;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.thumbnail {
+    width: 100%;
+    max-height: 20em;
+    object-fit: cover;
+    transition: 0.2s ease-in-out;
+}
+
+.work_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.work_left h5 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #1D8BCF;
+    writing-mode: vertical-lr;
+    padding-left: 5px;
+}
+
+.work_left_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.work_left_text p {
+    border-bottom: 1px solid #1D8BCF;
+    padding-left: 20px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.work_left_text p:nth-child(1) {
+    width: 7em;
+}
+
+.work_left_text p:nth-child(2) {
+    width: 9em;
+}
+
+.work_right_image_container {
+    overflow: hidden;
+    max-height: 20em;
+    width: 100%;
+}
+
+.work_right {
+    width: 40%;
+}
+
+.work_right:hover .thumbnail {
+    scale: 1.05;
+}
+
+.work_right a {
+    text-decoration: none;
+}
+
+.work_right p {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.work_right_arrow {
+    transform: rotate(-90deg);
+    width: 1.5em;
+    display: none;
+}
+
+@media only screen and (min-width: 640px) {
+    .work_right_arrow {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: -100%;
+    }
+
+    .work_left_text p {
+        padding-left: 2rem;
+    }
+
+    .work_left h5 {
+        padding-left: 15px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .work {
+        padding: 100px 5rem 100px 0;
+    }
+
+    .work_left_text p {
+        padding-left: 5rem;
+        font-size: 1.4rem;
+    }
+
+
+    .work_left_text p:nth-child(1) {
+        width: 11em;
+    }
+
+    .work_left_text p:nth-child(2) {
+        width: 13em;
+    }
+
+    .work_right p {
+        font-size: 2rem;
+    }
+
+    .work_left h5 {
+        font-size: 2.8rem;
+    }
+
+    .work_right_arrow {
+        width: 2em;
+        right: -60%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    
+    .work_right_arrow {
+        right: -100%;
+    }
+}
