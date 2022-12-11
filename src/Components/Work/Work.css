@@ -14,8 +14,39 @@
 
 .active {
     border-bottom: 1.5px solid #1D8BCF;
+    padding-bottom: 5px;
 }
 
 .work_main p {
     margin: 0 10px;
+}
+
+@media only screen and (min-width: 640px) {
+
+    .work_main {
+        margin-left: 2em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .work_main {
+        margin: 2em 0 2em 20px;
+    }
+
+    .active {
+        border-bottom: 2px solid #1D8BCF;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .work_main {
+        margin: 2em 0 2em 5em;
+    }
+
+    .work_main>a,
+    .work_main>p {
+        font-size: 1.8rem;
+    }
 }

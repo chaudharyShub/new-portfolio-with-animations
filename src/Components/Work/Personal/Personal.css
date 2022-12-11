@@ -40,7 +40,7 @@
     margin-bottom: 1em;
 }
 
-.personal_top>h3 {
+.personal_top>a {
     color: #1D8BCF;
     text-transform: uppercase;
     font-weight: 600;
@@ -50,6 +50,7 @@
     writing-mode: vertical-rl;
     width: 20%;
     word-wrap: break-word;
+    transition: 70ms ease;
 }
 
 .personal_project_image_container {
@@ -57,10 +58,11 @@
     overflow: hidden;
 }
 
-.personal_top img {
+.personal_inner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 70ms ease;
 }
 
 .personal_bottom {
@@ -73,8 +75,117 @@
     width: 20%;
 }
 
+.personal_bottom>div>img {
+    display: none;
+}
+
 .personal_bottom>p {
     width: 80%;
     font-size: 13px;
     padding: 0 20px;
+}
+
+@media only screen and (min-width: 640px) {
+
+    .personal_top {
+        padding: 0 2em;
+        margin-bottom: 2em;
+    }
+
+    .personal_bottom>p {
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .personal_project_image_container {
+        width: 45%;
+    }
+
+    .personal_bottom {
+        align-items: center;
+        margin-top: -3em;
+        padding-right: 2em;
+    }
+
+    .personal_bottom>p {
+        width: 50%;
+        margin-top: 2em;
+    }
+
+    .personal_bottom>div {
+        width: 45%;
+        border: 0;
+        overflow: hidden;
+    }
+
+    .personal_bottom>div>img {
+        display: block;
+        width: 100%;
+    }
+
+    .personal_inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .personal_top>a {
+        writing-mode: inherit;
+        text-align: center;
+        width: fit-content;
+        font-size: 1.5rem;
+        margin-right: 0;
+        margin-bottom: 3em;
+    }
+
+    .personal_top>a:hover {
+        border-bottom: 2px solid #1D8BCF;
+        padding-bottom: 5px;
+    }
+
+    .personal_top {
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .personal_main>h6 {
+        margin: 7em 0 10em 0;
+        font-size: 0.8rem;
+    }
+
+    .personal_main_inner_container>h5 {
+        writing-mode: inherit;
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .work_main {
+        margin: 2em 0 2em 5em;
+    }
+
+    .personal_top {
+        padding: 0 5em;
+    }
+
+    .personal_bottom {
+        padding-right: 5em;
+    }
+
+    .personal_bottom>p {
+        font-size: 1rem;
+        padding: 0 5rem;
+    }
+
+    .personal_top>a {
+        font-size: 2rem;
+    }
+
+    .personal_main_inner_container>h5 {
+        font-size: 2.8rem;
+        padding-left: 5rem;
+    }
 }

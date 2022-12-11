@@ -10,14 +10,14 @@ function Contact() {
 
     useEffect(() => {
         scrollToTop();
-        loadTopBar(setProgress, 20, 500);
+        loadTopBar(setProgress, 80, 900);
     }, []);
 
     return (
         <>
             <LoadingBar
                 height={2}
-                color='#f11946'
+                color='#1D8BCF'
                 loaderSpeed={450}
                 progress={progress}
             />

@@ -35,7 +35,8 @@ function Home() {
 
     const image = document.getElementsByClassName('selected_work');
     new simpleParallax(image, {
-        delay: 0,
+        scale: 1.5,
+        delay: 1,
         transition: 'cubic-bezier(0,0,0,1)'
     });
 
@@ -43,7 +44,7 @@ function Home() {
         <>
             <LoadingBar
                 height={2}
-                color='#f11946'
+                color='#1D8BCF'
                 loaderSpeed={450}
                 progress={progress}
             />
@@ -53,7 +54,7 @@ function Home() {
             <section id='section_2' className='section_2'>
                 <img className='ellipse_1' src={ellipse_1} alt="background" />
                 <div className='section_2_inner'>
-                    <Link className='about_link' to='#'>
+                    <Link className='about_link' to='/about'>
                         <span>
                             about
                             <div className='hidden_div'></div>
@@ -91,7 +92,11 @@ function Home() {
                             <ul>
                                 {
                                     follow_me.map(social => (
-                                        <li key={social}><Link>{social}</Link></li>
+                                        <li key={social.platform}>
+                                            <a href={social.link} target='_blank'>
+                                                {social.platform}
+                                            </a>
+                                        </li>
                                     ))
                                 }
                             </ul>
@@ -118,7 +123,11 @@ function Home() {
                                 <ul>
                                     {
                                         follow_me.map(social => (
-                                            <li key={social}><Link>{social}</Link></li>
+                                            <li key={social.platform}>
+                                                <a href={social.link} target='_blank'>
+                                                    {social.platform}
+                                                </a>
+                                            </li>
                                         ))
                                     }
                                 </ul>
@@ -192,7 +201,7 @@ function Home() {
                     ))
                 }
                 <div className='see_more'>
-                    <Link to='#'>
+                    <Link to='/work'>
                         <span>se</span>
                         <div></div>
                         <span>e</span>

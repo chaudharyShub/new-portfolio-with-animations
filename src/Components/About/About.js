@@ -17,7 +17,7 @@ function About() {
         <>
             <LoadingBar
                 height={2}
-                color='#f11946'
+                color='#1D8BCF'
                 loaderSpeed={450}
                 progress={progress}
             />

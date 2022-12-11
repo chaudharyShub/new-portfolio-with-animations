@@ -34,6 +34,7 @@
 
 .desktop_nav_links a {
     color: #1D8BCF;
+    transition: 70ms ease;
 }
 
 .desktop_nav_links a:hover {

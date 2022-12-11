@@ -6,7 +6,7 @@ import { loadTopBar, workHeroHeading, scrollToTop } from '../Details';
 
 import './Work.css';
 import glimpse from '../../images/glimpse.webp';
-import arrow_orange from '../../images/arrow_orange.svg';
+import arrow from '../../images/arrow.svg';
 
 
 function Work() {
@@ -22,11 +22,11 @@ function Work() {
         <>
             <LoadingBar
                 height={2}
-                color='#f11946'
+                color='#1D8BCF'
                 loaderSpeed={450}
                 progress={progress}
             />
-            <AnimationHero hero={glimpse} text={workHeroHeading} to={'work_main'} arrow={arrow_orange} />
+            <AnimationHero hero={glimpse} text={workHeroHeading} to={'work_main'} arrow={arrow} />
             <section className='work_main'>
                 <NavLink to='personal'>Personal</NavLink>
                 <p>/</p>

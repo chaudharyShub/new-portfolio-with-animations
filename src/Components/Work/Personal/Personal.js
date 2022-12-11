@@ -16,11 +16,13 @@ function Personal() {
                                     <div className='personal_project_image_container'>
                                         <img src={items.image1} alt={`project ${index + 1}`} />
                                     </div>
-                                    <h3>{items.heading}</h3>
+                                    <a href={items.link} target='_blank'>{items.heading}</a>
                                 </div>
                                 <div className='personal_bottom'>
                                     <p>{items.content}</p>
-                                    <div></div>
+                                    <div>
+                                        <img src={items.image2} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -33,3 +35,5 @@ function Personal() {
 }
 
 export default Personal;
+
+// https://www.figma.com/file/TLg8T7F1sMvSJQSe6gYo1I/My-Portfolio?node-id=0%3A1

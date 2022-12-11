@@ -159,10 +159,11 @@ p {
 
 .follow_me_desktop ul a {
     border-bottom: 1.3px solid #1D8BCF;
+    transition: 70ms ease;
 }
 
 .follow_me_desktop ul a:hover {
-    border-bottom: 0;
+    border-bottom: 0px solid #1D8BCF;
 }
 
 .languages_desktop h5 {
@@ -559,6 +560,14 @@ p {
     80% {
         transform: rotate(0deg);
     }
+
+    80% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
 }
 
 @media only screen and (min-width: 500px) {
@@ -635,7 +644,7 @@ p {
     }
 
     .selected_work {
-        width: 80%;
+        width: 65%;
         height: 15em;
     }
 
@@ -712,7 +721,6 @@ p {
         margin-left: -15em;
     }
 
-    /* box animation */
     .box {
         position: absolute;
         width: 300px;

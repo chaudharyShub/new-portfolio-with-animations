@@ -52,7 +52,7 @@
     display: flex;
     flex-direction: column;
     width: 90%;
-    padding: 20px 0px 20px 20px;
+    padding: 20px 0px 0px 20px;
 }
 
 .form_container form>h3 {
@@ -92,11 +92,15 @@ textarea {
 .form_container form button {
     all: unset;
     cursor: pointer;
-    color: #1D8BCF;
-    text-decoration: underline;
-    margin: 20px 0;
+    color: #E3ECD4;
+    margin: 2em 0;
     width: fit-content;
     display: inline-flex;
+    border: 1px solid #1D8BCF;
+    background: #1D8BCF;
+    border-radius: 7px;
+    padding: 7px 12px 7px 7px;
+    transition: 0.3s ease;
 }
 
 .submit_arrow {
@@ -111,6 +115,10 @@ textarea {
 
 .form_container form button:hover #submit_arrow {
     transform: rotate(-90deg) translatey(15px);
+}
+
+.form_container form button:hover {
+    padding: 7px 27px 7px 7px;
 }
 
 .social_media_container {

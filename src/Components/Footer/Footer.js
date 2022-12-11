@@ -4,8 +4,10 @@ import emailjs from '@emailjs/browser';
 import arrow from '../../images/arrow.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import footer_parallax from '../../images/footer_parallax.webp';
+import form_submit from '../../images/form_submit.svg';
 import 'react-toastify/dist/ReactToastify.css';
 import './Footer.css';
+import { socialMedia } from '../Details';
 
 
 function Footer() {
@@ -37,10 +39,10 @@ function Footer() {
         e.target.reset();
     }
 
-    const socialMedia = ['Facebook', 'Instagram', 'LinkedIn', 'Github', 'Whatsapp'];
-    const image = document.getElementsByClassName('selected_work_footer');
-    new SimpleParallax(image, {
-        delay: 0,
+    const images = document.getElementsByClassName('selected_work_footer');
+    new SimpleParallax(images, {
+        scale: 1.5,
+        delay: 1,
         transition: 'cubic-bezier(0,0,0,1)'
     });
 
@@ -69,7 +71,7 @@ function Footer() {
                             <textarea type="text" name='message' placeholder='Enter message' required />
                             <button type='submit'>
                                 Submit
-                                <img id='submit_arrow' className='submit_arrow' src={arrow} alt='arrow' />
+                                <img id='submit_arrow' className='submit_arrow' src={form_submit} alt='arrow' />
                             </button>
                         </form>
                         <div></div>
@@ -81,7 +83,8 @@ function Footer() {
                                 {
                                     socialMedia.map((items, index) => (
                                         <li key={index}>
-                                            <a href="#">{items}
+                                            <a href={items.link} target='_blank'>
+                                                {items.platform}
                                                 <img id='social_media_arrow' className='submit_arrow' src={arrow} alt="" />
                                             </a>
                                         </li>
