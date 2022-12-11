@@ -178,7 +178,7 @@ export const homeHeroHeading = {
     a: {
         text: 'FRONT',
         style: {
-            color: '#1D8BCF'
+            color: '#1D8BCF',
         }
     },
     b: {

@@ -100,7 +100,7 @@ p {
 }
 
 .hero_me {
-    width: 40%;
+    width: 85%;
     object-fit: cover;
     max-width: 14em;
 }
@@ -476,6 +476,7 @@ p {
 .see_more a {
     text-decoration: none;
     border-bottom: 1.5px solid #1D8BCF;
+    padding-top: 10px;
 }
 
 .see_more span {
@@ -572,7 +573,7 @@ p {
 
 @media only screen and (min-width: 500px) {
     .mech_to_web_text {
-        width: 50%;
+        width: 45%;
     }
 
     .mech_to_text_para p {
@@ -627,7 +628,7 @@ p {
     }
 
     .hero_me {
-        width: 55%;
+        width: 110%;
     }
 }
 
@@ -783,10 +784,6 @@ p {
 }
 
 @media only screen and (min-width: 1280px) {
-
-    .hero_image {
-        width: 90%;
-    }
 
     .about_link {
         width: 15rem;

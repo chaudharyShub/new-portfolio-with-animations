@@ -4,6 +4,7 @@ import LoadingBar from 'react-top-loading-bar';
 import simpleParallax from 'simple-parallax-js';
 import AnimationHero from '../AnimationHero/AnimationHero';
 import SelectedWork from '../SelectedWork/SelectedWork';
+import Atropos from 'atropos/react';
 import {
     follow_me,
     homeHeroHeading,
@@ -14,7 +15,6 @@ import {
     loadTopBar,
     animationBoxId
 } from '../Details';
-import 'atropos/css'
 import './Home.css';
 import arrow from '../../images/arrow.svg';
 import hero_me from '../../images/hero_me.webp';
@@ -66,7 +66,17 @@ function Home() {
                     </Link>
                     <h2>shubham chaudhary</h2>
                     <div className='mech_to_web'>
-                        <img className='hero_me' src={hero_me} alt="myself" />
+                        <Atropos
+                            activeOffset={100}
+                            rotateXMax={10}
+                            rotateYMax={10}
+                            rotateXInvert={true}
+                            rotateYInvert={true}
+                            shadowScale={0.9}
+                            shadowOffset={60}
+                        >
+                            <img className='hero_me' src={hero_me} alt="myself" />
+                        </Atropos>
                         <div className='mech_to_web_text'>
                             <h4>front-end developer</h4>
                             <div className='mech_to_text_para'>
@@ -114,7 +124,17 @@ function Home() {
                                     <p>web dev.</p>
                                 </div>
                             </div>
-                            <img className='hero_me' src={hero_me} alt="myself" />
+                            <Atropos
+                                activeOffset={100}
+                                rotateXMax={10}
+                                rotateYMax={10}
+                                rotateXInvert={true}
+                                rotateYInvert={true}
+                                shadowScale={0.9}
+                                shadowOffset={60}
+                            >
+                                <img data-atropos-offset="2" className='hero_me' src={hero_me} alt="myself" />
+                            </Atropos>
                         </div>
                         <div className='languages_follow_desktop'>
                             <div className="follow_me_desktop">

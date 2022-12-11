@@ -19,7 +19,7 @@ function Navbar() {
 
     return (
         <div className='nav_main'>
-            <Link to='/'>Shubham Chaudhary</Link>
+            <Link to='home'>Shubham Chaudhary</Link>
             <div className='desktop_nav'>
                 <div></div>
                 <div className='desktop_nav_links'>

@@ -49,7 +49,7 @@ function Footer() {
     return (
         <>
             <ToastContainer />
-            <section className='section_5'>
+            <footer className='section_5'>
                 <div className='footer_parallax'>
                     <img className="selected_work_footer" src={footer_parallax} alt="selected_work" />
                     <img className='footer_parallax_arrow' src={arrow} alt='arrow' />
@@ -95,7 +95,7 @@ function Footer() {
                     </div>
                 </div>
                 <p className='copyright'>COPYTIGHT © 2022 SHUBHAM. ALL RIGHT RESERVED.</p>
-            </section>
+            </footer>
         </>
     );
 }
