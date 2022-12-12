@@ -100,7 +100,7 @@ p {
 }
 
 .hero_me {
-    width: 85%;
+    width: 40%;
     object-fit: cover;
     max-width: 14em;
 }
@@ -629,10 +629,46 @@ p {
 
     .hero_me {
         width: 110%;
+        transition: 0.5s ease;
     }
 }
 
 @media only screen and (min-width: 768px) {
+
+    .animation_border_home {
+        position: relative;
+    }
+
+    .animation_border_home_left_top {
+        opacity: 0;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 0;
+        height: 0;
+        transition: 0.5s ease;
+    }
+
+    .animation_border_home_right_bottom {
+        opacity: 0;
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        width: 0;
+        height: 0;
+        transition: 0.5s ease;
+    }
+
+    .animation_border_home:hover .animation_border_home_left_top,
+    .animation_border_home:hover .animation_border_home_right_bottom {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animation_border_home:hover .hero_me {
+        scale: 1.05;
+    }
 
     .software>h5 {
         width: 100%;

@@ -1,7 +1,7 @@
 .about_main {
-    border: 1px solid black;
-    height: 100vh;
     padding-top: 55px;
+    display: flex;
+    flex-direction: column;
 }
 
 .about_main h1 {
@@ -9,7 +9,12 @@
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
-    /* border: 1px solid red; */
+    margin: 12px 0 2em 0;
+    padding-left: 20px;
+}
+
+.about_main h1>img {
+    display: none;
 }
 
 .about_main h1>div {
@@ -21,14 +26,267 @@
     margin-right: 10px;
 }
 
-.about_main h1>div:nth-child(2) {
-    background: url('../../images/about_me.webp');
+.about_main_inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-.about_main h1>div:nth-child(5) {
-    background: url('../../images/about_me_b.webp');
+.about_hero_image {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 0 20px 0 40px;
+    max-width: 550px;
+    margin: 0 auto;
 }
 
 .about_me_hero {
-    width: 11em;
+    width: 100%;
+    z-index: 2;
+    max-width: 12em;
+}
+
+.animation_border_left_top {
+    opacity: 0;
+    position: absolute;
+    top: -5%;
+    left: -10%;
+    width: 0;
+    height: 0;
+    z-index: -5;
+    transition: 0.5s ease;
+}
+
+.animation_border_right_bottom {
+    opacity: 0;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    width: 0;
+    height: 0;
+    z-index: -5;
+    transition: 0.5s ease;
+}
+
+.my_atropos {
+    width: 60%;
+    max-width: 12em;
+    position: relative;
+    margin-left: 1em;
+}
+
+.my_atropos:hover .animation_border_left_top,
+.my_atropos:hover .animation_border_right_bottom {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.about_hero_image>a>img {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    transform: translateY(50%);
+    animation: moveArrowY 1s alternate-reverse infinite;
+}
+
+.about_text_div {
+    padding: 5em 20px 1em;
+}
+
+.about_text_div>p {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.download_resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    border-bottom: 1px solid #1D8BCF;
+    margin: 2em 0 7em;
+    font-size: 13px;
+}
+
+.download_resume>a {
+    margin: 20px 0;
+    display: flex;
+}
+
+.submit_arrow {
+    transition: 0.3s ease;
+}
+
+.download_resume>a:hover .submit_arrow {
+    transform: rotate(-90deg) translatey(15px);
+}
+
+@keyframes moveArrowY {
+    from {
+        transform: translateY(-10px)
+    }
+
+    to {
+        transform: translateY(20px)
+    }
+}
+
+@media only screen and (min-width: 500px) {
+
+    .about_hero_image>a>img {
+        right: 10%;
+    }
+
+    .about_text_div {
+        padding: 6em 20px 1em;
+    }
+
+    .my_atropos {
+        margin-left: 2em;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+
+    .about_hero_image {
+        padding-right: 2em;
+    }
+
+    .about_text_div {
+        padding: 6em 2em 1em;
+    }
+
+    .about_main h1 {
+        font-size: 2rem;
+        padding-left: 1rem;
+        cursor: default;
+        display: flex;
+        align-items: center;
+        margin: 12px 0 1em 0;
+    }
+
+    .about_main h1>div:nth-child(2) {
+        background: url('../../images/about_me_a.webp');
+        height: 2em;
+        width: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.7s ease;
+    }
+
+    .about_main h1>div:nth-child(5) {
+        background: url('../../images/about_me_b.webp');
+        height: 2em;
+        width: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.7s ease;
+    }
+
+    .about_main h1:hover div:nth-child(2),
+    .about_main h1:hover div:nth-child(5) {
+        width: 2.6em;
+        margin: 0 5px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .about_hero_image>a>img {
+        display: none;
+    }
+
+    .about_main>h1 {
+        margin: 12px 0 0 0;
+        padding-bottom: 0;
+    }
+
+    .about_main h1>img {
+        display: block;
+        transform: rotate(-90deg);
+        width: 1.4rem;
+        margin-left: 25px;
+    }
+
+    .my_atropos {
+        transform: translateY(2em);
+    }
+
+    .about_main_inner {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 7em;
+        margin-top: 1em;
+        border-top: 1px solid #1D8BCF;
+        padding-top: 3em;
+    }
+
+    .about_text_div,
+    .about_hero_image {
+        padding: 0;
+    }
+
+    .download_resume {
+        justify-content: inherit;
+        margin-top: 2em;
+    }
+
+    .about_text_div {
+        width: 60%;
+    }
+
+    .about_text_div>p {
+        line-height: 20px;
+        padding-right: 2em;
+    }
+
+    .about_hero_image {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .my_atropos {
+        margin: 0;
+    }
+
+    .about_main h1>span:nth-child(3),
+    .about_main h1>span:nth-child(6) {
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .about_main>h1 {
+        margin: 0;
+    }
+
+    .about_main h1>img {
+        width: 2.2rem;
+        margin-left: 35px;
+    }
+
+    .about_text_div>p {
+        font-size: 1rem;
+        line-height: 30px;
+        padding-right: 5em;
+    }
+
+    .my_atropos {
+        transform: translateY(0);
+    }
+
+    .download_resume {
+        font-size: 1rem;
+    }
+
+    .about_main>h1 {
+        font-size: 3rem;
+        padding-left: 5rem;
+    }
 }

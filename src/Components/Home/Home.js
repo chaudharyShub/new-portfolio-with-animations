@@ -4,7 +4,6 @@ import LoadingBar from 'react-top-loading-bar';
 import simpleParallax from 'simple-parallax-js';
 import AnimationHero from '../AnimationHero/AnimationHero';
 import SelectedWork from '../SelectedWork/SelectedWork';
-import Atropos from 'atropos/react';
 import {
     follow_me,
     homeHeroHeading,
@@ -40,6 +39,16 @@ function Home() {
         transition: 'cubic-bezier(0,0,0,1)'
     });
 
+    const animation_border_home_left_top = {
+        borderTop: '2px solid #1D8BCF',
+        borderLeft: '2px solid #1D8BCF'
+    }
+
+    const animation_border_home_right_bottom = {
+        borderBottom: '2px solid #1D8BCF',
+        borderRight: '2px solid #1D8BCF'
+    }
+
     return (
         <>
             <LoadingBar
@@ -49,7 +58,12 @@ function Home() {
                 progress={progress}
             />
 
-            <AnimationHero hero={hero_light} text={homeHeroHeading} to={'section_2'} arrow={arrow} />
+            <AnimationHero
+                hero={hero_light}
+                text={homeHeroHeading}
+                to={'section_2'}
+                arrow={arrow}
+            />
 
             <section id='section_2' className='section_2'>
                 <img className='ellipse_1' src={ellipse_1} alt="background" />
@@ -66,17 +80,7 @@ function Home() {
                     </Link>
                     <h2>shubham chaudhary</h2>
                     <div className='mech_to_web'>
-                        <Atropos
-                            activeOffset={100}
-                            rotateXMax={10}
-                            rotateYMax={10}
-                            rotateXInvert={true}
-                            rotateYInvert={true}
-                            shadowScale={0.9}
-                            shadowOffset={60}
-                        >
-                            <img className='hero_me' src={hero_me} alt="myself" />
-                        </Atropos>
+                        <img className='hero_me' src={hero_me} alt="myself" />
                         <div className='mech_to_web_text'>
                             <h4>front-end developer</h4>
                             <div className='mech_to_text_para'>
@@ -124,17 +128,11 @@ function Home() {
                                     <p>web dev.</p>
                                 </div>
                             </div>
-                            <Atropos
-                                activeOffset={100}
-                                rotateXMax={10}
-                                rotateYMax={10}
-                                rotateXInvert={true}
-                                rotateYInvert={true}
-                                shadowScale={0.9}
-                                shadowOffset={60}
-                            >
+                            <div className='animation_border_home'>
                                 <img data-atropos-offset="2" className='hero_me' src={hero_me} alt="myself" />
-                            </Atropos>
+                                <div style={animation_border_home_left_top} className='animation_border_home_left_top'></div>
+                                <div style={animation_border_home_right_bottom} className='animation_border_home_right_bottom'></div>
+                            </div>
                         </div>
                         <div className='languages_follow_desktop'>
                             <div className="follow_me_desktop">
