@@ -13,6 +13,16 @@ import indian_shatabdi_news_b from '../images/indian_shatabdi_news_b.webp';
 import postmaster from '../images/postmaster.webp';
 import postmaster_b from '../images/postmaster_b.webp';
 
+import mechanical_software_arrow_dark from '../images/mechanical_software_arrow_dark.svg';
+import arrow_dark from '../images/arrow_dark.svg';
+import ellipse_dark from '../images/ellipse_dark.svg';
+import light_mode from '../images/light_mode.png';
+import hero_dark from '../images/hero_dark.webp';
+import glimpses_dark from '../images/glimpses_dark.webp';
+import contact_me_dark from '../images/contact_me_dark.webp';
+import selected_work_dark from '../images/selected_work_dark.webp';
+import footer_parallax_dark from '../images/footer_parallax_dark.webp';
+
 
 export const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -216,6 +226,9 @@ export const homeHeroHeading = {
 };
 
 export const workHeroHeading = {
+    h1Style: {
+        marginTop: '-0.5em'
+    },
     a: {
         text: 'SOME',
         style: {
@@ -227,7 +240,8 @@ export const workHeroHeading = {
         style: {
             textDecoration: 'line-through',
             fontStyle: 'italic',
-            color: 'white'
+            color: 'white',
+            display: 'block'
         }
     },
     c: {
@@ -239,13 +253,13 @@ export const workHeroHeading = {
     d: {
         text: 'OF',
         style: {
-            color: '#1D8BCF'
+            color: '#1D8BCF',
         }
     },
     e: {
         text: 'MY',
         style: {
-            color: '#1D8BCF'
+            color: '#1D8BCF',
         }
     },
     f: {
@@ -255,3 +269,68 @@ export const workHeroHeading = {
         }
     },
 };
+
+export const contactHeroHeading = {
+    h1Style: {
+        marginTop: '-0.5em'
+    },
+    a: {
+        text: "LET'S",
+        style: {
+            color: '#1D8BCF',
+            display: 'block'
+        }
+    },
+    b: {
+        text: '',
+        style: {
+            color: ''
+        }
+    },
+    c: {
+        text: 'GET',
+        style: {
+            color: '#1D8BCF',
+            display: 'block'
+        }
+    },
+    d: {
+        text: '',
+        style: {
+            color: ''
+        }
+    },
+    e: {
+        text: '',
+        style: {
+            color: ''
+        }
+    },
+    f: {
+        text: 'CONNECTED',
+        style: {
+            textDecoration: 'line-through',
+            fontStyle: 'italic',
+            color: 'white',
+            display: 'block'
+        }
+    },
+};
+
+
+export const darkModeStyle = {
+    color: 'white',
+    arrow: arrow_dark,
+
+    homeHero: hero_dark,
+    ellipse: ellipse_dark,
+    selected_work: selected_work_dark,
+    mechanicalSoftwareArrow: mechanical_software_arrow_dark,
+
+    glimpse: glimpses_dark,
+    contactMe: contact_me_dark,
+
+    footerImage: footer_parallax_dark,
+
+    defaultToggleButton: light_mode
+}

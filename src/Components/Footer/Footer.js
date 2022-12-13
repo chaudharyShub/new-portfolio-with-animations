@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import SimpleParallax from 'simple-parallax-js';
 import emailjs from '@emailjs/browser';
 import arrow from '../../images/arrow.svg';
@@ -8,9 +8,13 @@ import form_submit from '../../images/form_submit.svg';
 import 'react-toastify/dist/ReactToastify.css';
 import './Footer.css';
 import { socialMedia } from '../Details';
+import { StateContext } from '../../App';
 
 
 function Footer() {
+
+    const context = useContext(StateContext);
+    const style = context.state.style;
 
     const notify = (message, type) => {
         if (type === 'success') {
@@ -51,21 +55,21 @@ function Footer() {
             <ToastContainer />
             <footer className='section_5'>
                 <div className='footer_parallax'>
-                    <img className="selected_work_footer" src={footer_parallax} alt="selected_work" />
-                    <img className='footer_parallax_arrow' src={arrow} alt='arrow' />
+                    <img className="selected_work_footer" src={style.footerImage} alt="selected_work" />
+                    <img className='footer_parallax_arrow' src={style.arrow} alt='arrow' />
                 </div>
                 <div className='lets_connect_parent'>
                     <div></div>
                     <div className='lets_connect'>
-                        <h2>Let's </h2>
-                        <h2>Connect</h2>
-                        <p>Get in touch</p>
+                        <h2 style={{ color: style.color }}>Let's </h2>
+                        <h2 style={{ color: style.color }}>Connect</h2>
+                        <p style={{ color: style.color }}>Get in touch</p>
                     </div>
                 </div>
                 <div className='form_social_container'>
                     <div className="form_container">
                         <form onSubmit={sendEmail} ref={form}>
-                            <h3>send email</h3>
+                            <h3 style={{ color: style.color }}>send email</h3>
                             <input type="text" name='name' placeholder='Enter full name' required />
                             <input type="email" name='email' placeholder='Enter your email' required />
                             <textarea type="text" name='message' placeholder='Enter message' required />
@@ -83,9 +87,9 @@ function Footer() {
                                 {
                                     socialMedia.map((items, index) => (
                                         <li key={index}>
-                                            <a href={items.link} target='_blank'>
+                                            <a style={{ color: style.color }} href={items.link} target='_blank'>
                                                 {items.platform}
-                                                <img id='social_media_arrow' className='submit_arrow' src={arrow} alt="" />
+                                                <img id='social_media_arrow' className='submit_arrow' src={style.arrow} alt="" />
                                             </a>
                                         </li>
                                     ))
@@ -94,7 +98,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <p className='copyright'>COPYTIGHT © 2022 SHUBHAM. ALL RIGHT RESERVED.</p>
+                <p className='copyright' style={{ color: style.color }}>COPYTIGHT © 2022 SHUBHAM. ALL RIGHT RESERVED.</p>
             </footer>
         </>
     );

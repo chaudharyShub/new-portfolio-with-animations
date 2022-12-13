@@ -5,7 +5,7 @@
 .work {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1.5px solid #1D8BCF;
+    /* border-bottom: 1.5px solid #1D8BCF; */
     padding: 50px 0;
     width: 100%;
 }
@@ -27,7 +27,7 @@
 .work_left h5 {
     font-weight: 500;
     font-size: 1.8rem;
-    color: #1D8BCF;
+    /* color: #1D8BCF; */
     writing-mode: vertical-lr;
     padding-left: 20px;
 }
@@ -38,7 +38,7 @@
 }
 
 .work_left_text p {
-    border-bottom: 1px solid #1D8BCF;
+    /* border-bottom: 1px solid #1D8BCF; */
     padding-left: 20px;
     display: inline-block;
     font-weight: 500;
@@ -103,11 +103,11 @@
     }
 
     .work_right p {
-        border-bottom: 2px solid #E3ECD4;
+        /* border-bottom: 2px solid #E3ECD4; */
     }
 
     .work_right:hover p {
-        border-bottom: 2px solid #1D8BCF;
+        /* border-bottom: 2px solid #1D8BCF; */
     }
 }
 

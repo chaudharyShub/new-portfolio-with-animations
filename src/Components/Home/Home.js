@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
 import simpleParallax from 'simple-parallax-js';
 import AnimationHero from '../AnimationHero/AnimationHero';
 import SelectedWork from '../SelectedWork/SelectedWork';
+import { StateContext } from '../../App';
 import {
     follow_me,
     homeHeroHeading,
@@ -15,15 +16,13 @@ import {
     animationBoxId
 } from '../Details';
 import './Home.css';
-import arrow from '../../images/arrow.svg';
 import hero_me from '../../images/hero_me.webp';
-import ellipse_1 from '../../images/ellipse_1.webp';
-import hero_light from '../../images/hero_light.webp';
-import selected_work from '../../images/selected_work.webp';
-import mechanical_software_arrow from '../../images/mechanical_software_arrow.svg';
 
 
 function Home() {
+
+    const context = useContext(StateContext);
+    const style = context.state.style;
 
     const [progress, setProgress] = useState(0);
 
@@ -40,13 +39,13 @@ function Home() {
     });
 
     const animation_border_home_left_top = {
-        borderTop: '2px solid #1D8BCF',
-        borderLeft: '2px solid #1D8BCF'
+        borderTop: `2px solid ${style.color}`,
+        borderLeft: `2px solid ${style.color}`
     }
 
     const animation_border_home_right_bottom = {
-        borderBottom: '2px solid #1D8BCF',
-        borderRight: '2px solid #1D8BCF'
+        borderBottom: `2px solid ${style.color}`,
+        borderRight: `2px solid ${style.color}`
     }
 
     return (
@@ -59,38 +58,38 @@ function Home() {
             />
 
             <AnimationHero
-                hero={hero_light}
+                hero={style.homeHero}
                 text={homeHeroHeading}
                 to={'section_2'}
-                arrow={arrow}
+                arrow={style.arrow}
             />
 
             <section id='section_2' className='section_2'>
-                <img className='ellipse_1' src={ellipse_1} alt="background" />
+                <img className='ellipse_1' src={style.ellipse} alt="background" />
                 <div className='section_2_inner'>
-                    <Link className='about_link' to='/about'>
+                    <Link className='about_link' to='/about' style={{ color: style.color }}>
                         <span>
                             about
                             <div className='hidden_div'></div>
                             me
                         </span>
                         <div className='hidden_div_2'></div>
-                        <img className='right_arrow' src={arrow} alt='arrow' />
+                        <img className='right_arrow' src={style.arrow} alt='arrow' />
                         <span className='DOB'>1995</span>
                     </Link>
-                    <h2>shubham chaudhary</h2>
+                    <h2 style={{ color: style.color }}>shubham chaudhary</h2>
                     <div className='mech_to_web'>
                         <img className='hero_me' src={hero_me} alt="myself" />
-                        <div className='mech_to_web_text'>
-                            <h4>front-end developer</h4>
+                        <div className='mech_to_web_text' style={{ color: style.color }}>
+                            <h4 >front-end developer</h4>
                             <div className='mech_to_text_para'>
                                 <p>mechanical</p>
-                                <img className='right_arrow' src={arrow} alt="arrow" />
+                                <img className='right_arrow' src={style.arrow} alt="arrow" />
                                 <p>web dev.</p>
                             </div>
                         </div>
                     </div>
-                    <div className='languages_follow'>
+                    <div className='languages_follow' style={{ color: style.color }}>
                         <div className="languages">
                             <h5>languages</h5>
                             <ul>
@@ -107,7 +106,7 @@ function Home() {
                                 {
                                     follow_me.map(social => (
                                         <li key={social.platform}>
-                                            <a href={social.link} target='_blank'>
+                                            <a style={{ color: style.color }} href={social.link} target='_blank'>
                                                 {social.platform}
                                             </a>
                                         </li>
@@ -120,11 +119,11 @@ function Home() {
                     {/* DESKTOP */}
                     <div className='mech_to_web_desktop'>
                         <div className='mech_to_web_desktop_text_image'>
-                            <div className='mech_to_web_text_desktop'>
-                                <h4>front-end developer</h4>
+                            <div className='mech_to_web_text_desktop' style={{ color: style.color }}>
+                                <h4 >front-end developer</h4>
                                 <div>
                                     <p>mechanical engg.</p>
-                                    <img src={arrow} alt="arrow" />
+                                    <img src={style.arrow} alt="arrow" />
                                     <p>web dev.</p>
                                 </div>
                             </div>
@@ -134,15 +133,20 @@ function Home() {
                                 <div style={animation_border_home_right_bottom} className='animation_border_home_right_bottom'></div>
                             </div>
                         </div>
-                        <div className='languages_follow_desktop'>
-                            <div className="follow_me_desktop">
+                        <div className='languages_follow_desktop' style={{ color: style.color }}>
+                            <div className="follow_me_desktop" style={{
+                                borderBottom: `1px solid ${style.color}`
+                            }}>
                                 <h5>follow me</h5>
                                 <p>I am available on the following social media platforms.</p>
                                 <ul>
                                     {
                                         follow_me.map(social => (
                                             <li key={social.platform}>
-                                                <a href={social.link} target='_blank'>
+                                                <a style={{
+                                                    color: style.color,
+                                                    borderBottom: `1.3px solid ${style.color}`
+                                                }} href={social.link} target='_blank'>
                                                     {social.platform}
                                                 </a>
                                             </li>
@@ -151,7 +155,7 @@ function Home() {
                                 </ul>
                             </div>
                             <div className="languages_desktop">
-                                <h5>languages</h5>
+                                <h5 style={{ borderBottom: `1px solid ${style.color}` }}>languages</h5>
                                 <ul>
                                     {
                                         languages.map(language => (
@@ -175,15 +179,15 @@ function Home() {
                         </div>
                     </div>
                     <div></div>
-                    <div className='mechanical_software'>
+                    <div className='mechanical_software' style={{ color: style.color }}>
                         {
                             mechanical_software.map(items => {
                                 if (items.className === 'arrow') {
-                                    return <img key={items.id} src={mechanical_software_arrow} alt="arrow" />
+                                    return <img key={items.id} src={style.mechanicalSoftwareArrow} alt="arrow" />
                                 } else {
                                     return (
                                         <div className={items.className} key={items.id}>
-                                            <h5>{items.h5}</h5>
+                                            <h5 style={{ borderBottom: `1px solid ${style.color}` }}>{items.h5}</h5>
                                             <p>{items.company}</p>
                                             <p>{items.totalTime}<br />
                                                 {items.years}</p>
@@ -195,18 +199,18 @@ function Home() {
                     </div>
                 </div>
                 <div className="selected_work_container">
-                    <img className="selected_work" src={selected_work} alt="selected_work" />
+                    <img className="selected_work" src={style.selected_work} alt="selected_work" />
                     <div className='selected_work_text'>
                         <p>SELE</p>
                         <p>CTED</p>
                         <p>WORK</p>
                     </div>
-                    <img className='selected_work_arrow' src={arrow} alt='arrow' />
+                    <img className='selected_work_arrow' src={style.arrow} alt='arrow' />
                 </div>
             </section>
 
-            <section className='section_4'>
-                <p>Selected Works</p>
+            <section className='section_4' style={{ color: style.color }}>
+                <p style={{ borderTop: `1.5px solid ${style.color}` }}>Selected Works</p>
                 {
                     selectedWork.map(work => (
                         <SelectedWork
@@ -215,18 +219,22 @@ function Home() {
                             name={work.name}
                             img={work.image}
                             link={work.link}
+                            style={{ color: style.color }}
                         />
                     ))
                 }
                 <div className='see_more'>
-                    <Link to='/work'>
+                    <Link to='/work' style={{
+                        color: style.color,
+                        borderBottom: `1px solid ${style.color}`
+                    }}>
                         <span>se</span>
                         <div></div>
                         <span>e</span>
                         <span>mo</span>
                         <div></div>
                         <span>re</span>
-                        <img src={arrow} alt='arrow' />
+                        <img src={style.arrow} alt='arrow' />
                     </Link>
                 </div>
             </section>

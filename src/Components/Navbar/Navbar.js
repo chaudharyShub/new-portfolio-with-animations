@@ -1,56 +1,86 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import dark_mode from '../../images/dark_mode.png';
+import { StateContext } from '../../App';
 
 function Navbar() {
 
+    const context = useContext(StateContext);
+    const style = context.state.style;
+    // console.log(context.state);
+
     const [menuOpen, setMenuOpen] = useState(false);
+    const [hideMiddleHamburger, setHideMiddleHamburger] = useState(true);
+
     const navItems = ['home', 'about', 'work', 'contact'];
 
     const show = (e) => {
         if (e.target.innerText === 'DARK MODE' || e.target.innerText === 'LIGHT MODE') return;
         menuOpen ? setMenuOpen(false) : setMenuOpen(true);
+        hideMiddleHamburger ? setHideMiddleHamburger(false) : setHideMiddleHamburger(true);
     }
 
     const toggleModeButtonStyle = {
         filter: 'invert(36%) sepia(98%) saturate(436%) hue-rotate(159deg) brightness(108%) contrast(95%)'
     }
 
+    const handleClick = () => {
+        if (context.state.mode) {
+            context.disableDarkMode();
+        } else {
+            context.enableDarkMode();
+        }
+    }
+
     return (
         <div className='nav_main'>
-            <Link to='home'>Shubham Chaudhary</Link>
+            <Link style={{ color: style.color }} to='home'>Shubham Chaudhary</Link>
             <div className='desktop_nav'>
                 <div></div>
                 <div className='desktop_nav_links'>
-                    <Link to='about'>About</Link>
-                    <Link to='work'>Work</Link>
-                    <button>
-                        <img style={toggleModeButtonStyle} src={dark_mode} alt='toggleMode' />
+                    <Link style={{ color: style.color }} to='about'>About</Link>
+                    <Link style={{ color: style.color }} to='work'>Work</Link>
+                    <button onClick={handleClick}>
+                        <img style={!context.state.mode ? toggleModeButtonStyle : null} src={style.defaultToggleButton} alt='toggleMode' />
                     </button>
-                    <Link to='contact'>Contact</Link>
+                    <Link style={{ color: style.color }} to='contact'>Contact</Link>
                 </div>
             </div>
-            <div className={`${menuOpen ? 'active' : ''} navigation mobile_nav`}>
-                <button className={`${menuOpen ? 'open' : ''} hamburger`} onClick={show}>
-                    <div id="bar1" className="bar"></div>
-                    <div id="bar2" className="bar"></div>
-                    <div id="bar3" className="bar"></div>
+
+            <div
+                className={`${menuOpen ? 'active' : ''} navigation mobile_nav`}
+                style={{ backgroundColor: context.state.mode ? 'black' : '#E3ECD4' }}
+            >
+                <button className={`${menuOpen ? 'open' : null} hamburger`} onClick={show}>
+                    <div id="bar1" style={{ background: context.state.mode ? 'white' : '#1D8BCF' }} className="bar"></div>
+                    <div id="bar2" style={hideMiddleHamburger ? { background: context.state.mode ? 'white' : '#1D8BCF' } : null} className="bar"></div>
+                    <div id="bar3" style={{ background: context.state.mode ? 'white' : '#1D8BCF' }} className="bar"></div>
                 </button>
                 <nav>
                     <ul onClick={show}>
                         {navItems.map(items =>
                             <Link key={items} to={`${items}`}>
-                                <li >
+                                <li style={{ color: style.color }}>
                                     {items}
                                 </li>
                             </Link>
                         )}
-                        <li><button>dark mode</button></li>
+                        <li>
+                            <button
+                                style={{
+                                    color: style.color,
+                                    borderBottom: `2px solid ${style.color}`
+                                }}
+                                onClick={handleClick}>
+                                {
+                                    context.state.mode ? 'light mode' : 'dark mode'
+                                }
+                            </button>
+                        </li>
                     </ul>
                 </nav>
             </div>
-        </div>
+        </div >
     );
 }
 
