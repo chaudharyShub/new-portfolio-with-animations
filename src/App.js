@@ -18,7 +18,7 @@ function App() {
       payload: darkModeStyle
     });
   }
-  
+
   const disableDarkMode = () => {
     dispatch({
       type: 'DISABLE_DARK_MODE'
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <StateContext.Provider value={value}>
-      <div className="app_main_outer" style={{ background: state.mode ? 'black' : '#E3ECD4' }}>
+      <div className="app_main_outer" style={{ background: state.style.background }}>
         <Navbar />
         <div className="app_main">
           <Element />

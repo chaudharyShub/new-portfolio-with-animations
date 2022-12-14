@@ -1,20 +1,30 @@
 import React, { useContext, useRef } from 'react';
 import SimpleParallax from 'simple-parallax-js';
 import emailjs from '@emailjs/browser';
-import arrow from '../../images/arrow.svg';
+import black_arrow from '../../images/black_arrow.svg';
 import { ToastContainer, toast } from 'react-toastify';
-import footer_parallax from '../../images/footer_parallax.webp';
 import form_submit from '../../images/form_submit.svg';
-import 'react-toastify/dist/ReactToastify.css';
-import './Footer.css';
 import { socialMedia } from '../Details';
 import { StateContext } from '../../App';
+import 'react-toastify/dist/ReactToastify.css';
+import './Footer.css';
 
 
 function Footer() {
 
     const context = useContext(StateContext);
     const style = context.state.style;
+
+    const submitButton = {
+        background: style.color,
+        color: style.background
+    }
+
+    const inputAndTextAreaStyle = {
+        borderBottom: `1px solid ${style.color}`,
+        color: style.color,
+        '--placeholder-color': style.color
+    }
 
     const notify = (message, type) => {
         if (type === 'success') {
@@ -24,14 +34,14 @@ function Footer() {
                 autoClose: 2000,
                 theme: "dark",
             });
-        } else {
-            toast.error(message, {
-                position: toast.POSITION.TOP_RIGHT,
-                pauseOnHover: false,
-                autoClose: 2000,
-                theme: "dark",
-            });
+            return;
         }
+        toast.error(message, {
+            position: toast.POSITION.TOP_RIGHT,
+            pauseOnHover: false,
+            autoClose: 2000,
+            theme: "dark",
+        });
     }
 
     const form = useRef();
@@ -61,26 +71,29 @@ function Footer() {
                 <div className='lets_connect_parent'>
                     <div></div>
                     <div className='lets_connect'>
-                        <h2 style={{ color: style.color }}>Let's </h2>
-                        <h2 style={{ color: style.color }}>Connect</h2>
+                        <h2 style={{ color: style.color, borderColor: style.color }}>Let's </h2>
+                        <h2 style={{ color: style.color, borderColor: style.color }}>Connect</h2>
                         <p style={{ color: style.color }}>Get in touch</p>
                     </div>
                 </div>
                 <div className='form_social_container'>
                     <div className="form_container">
-                        <form onSubmit={sendEmail} ref={form}>
+                        <form onSubmit={sendEmail} ref={form} style={{
+                            borderBottom: `1.5px solid ${style.color}`,
+                            borderRight: `1.5px solid ${style.color}`
+                        }}>
                             <h3 style={{ color: style.color }}>send email</h3>
-                            <input type="text" name='name' placeholder='Enter full name' required />
-                            <input type="email" name='email' placeholder='Enter your email' required />
-                            <textarea type="text" name='message' placeholder='Enter message' required />
-                            <button type='submit'>
+                            <input style={inputAndTextAreaStyle} type="text" name='name' placeholder='Enter full name' required />
+                            <input style={inputAndTextAreaStyle} type="email" name='email' placeholder='Enter your email' required />
+                            <textarea style={inputAndTextAreaStyle} type="text" name='message' placeholder='Enter message' required />
+                            <button type='submit' style={submitButton}>
                                 Submit
-                                <img id='submit_arrow' className='submit_arrow' src={form_submit} alt='arrow' />
+                                <img id='submit_arrow' className='submit_arrow' src={context.state.mode ? black_arrow : form_submit} alt='arrow' />
                             </button>
                         </form>
-                        <div></div>
+                        <div style={{ borderTop: `1.5px solid ${style.color}` }}></div>
                     </div>
-                    <div className="social_media_container">
+                    <div className="social_media_container" style={{ borderColor: style.color }}>
                         <div></div>
                         <div className='social_media'>
                             <ul>

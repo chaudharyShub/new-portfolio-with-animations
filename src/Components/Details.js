@@ -2,8 +2,8 @@ import algoexpert from '../images/algoexpert.webp';
 import js_form_validation from '../images/js_form_validation.webp';
 import pokemon from '../images/pokemon.webp';
 import algoexpert_2 from '../images/algoexpert_2.webp';
-import my_react_portfolio from '../images/my_react_portfolio.webp';
-import my_react_portfolio_b from '../images/my_react_portfolio_b.webp';
+import my_react_portfolio_light from '../images/my_react_portfolio_light.webp';
+import my_react_portfolio_light_b from '../images/my_react_portfolio_light_b.webp';
 import js_form_validation_work from '../images/js_form_validation_work.webp';
 import js_form_validation_work_b from '../images/js_form_validation_work_b.webp';
 import pokemon_work from '../images/pokemon_work.webp';
@@ -116,7 +116,7 @@ export const selectedWork = [
     {
         id: '02/',
         name: 'my react portfolio',
-        image: my_react_portfolio,
+        image: null,
         link: 'http://chaudharyshubham.com/'
     },
     {
@@ -144,11 +144,11 @@ export const personalWork = [
     },
     {
         sno: '02/',
-        image1: my_react_portfolio,
-        image2: my_react_portfolio_b,
+        image1: null,
+        image2: null,
         link: 'http://chaudharyshubham.com/',
         heading: 'my react portfolio',
-        content: "This is my personal portfolio website. Designed on FIGMA, developed on React.Js and custom CSS. To view FIGMA design (click_here).",
+        content: "This is my personal portfolio website. Designed on FIGMA, developed on React.Js and custom CSS. To view FIGMA design, | click here.",
     },
     {
         sno: '03/',
@@ -184,7 +184,7 @@ export const personalWork = [
     },
 ];
 
-export const homeHeroHeading = {
+export const homeHeroHeadingLight = {
     a: {
         text: 'FRONT',
         style: {
@@ -225,7 +225,48 @@ export const homeHeroHeading = {
     },
 };
 
-export const workHeroHeading = {
+export const homeHeroHeadingDark = {
+    a: {
+        text: 'FRONT',
+        style: {
+            color: 'white',
+        }
+    },
+    b: {
+        text: 'END',
+        style: {
+            color: 'white'
+        }
+    },
+    c: {
+        text: 'DEVEL',
+        style: {
+            color: 'white'
+        }
+    },
+    d: {
+        text: 'OPER',
+        style: {
+            color: 'white'
+        }
+    },
+    e: {
+        text: 'FROM',
+        style: {
+            textDecoration: 'line-through',
+            fontStyle: 'italic',
+            color: 'white'
+        }
+    },
+    f: {
+        text: 'INDIA',
+        style: {
+            color: 'white'
+        }
+    },
+};
+
+export const workHeroHeadingLight = {
     h1Style: {
         marginTop: '-0.5em'
     },
@@ -270,7 +311,52 @@ export const workHeroHeading = {
     },
 };
 
-export const contactHeroHeading = {
+export const workHeroHeadingDark = {
+    h1Style: {
+        marginTop: '-0.5em'
+    },
+    a: {
+        text: 'SOME',
+        style: {
+            color: 'white'
+        }
+    },
+    b: {
+        text: 'GLIMPSES',
+        style: {
+            textDecoration: 'line-through',
+            fontStyle: 'italic',
+            color: '#CF00A5',
+            display: 'block'
+        }
+    },
+    c: {
+        text: '',
+        style: {
+            color: ''
+        }
+    },
+    d: {
+        text: 'OF',
+        style: {
+            color: 'white',
+        }
+    },
+    e: {
+        text: 'MY',
+        style: {
+            color: 'white',
+        }
+    },
+    f: {
+        text: 'WORK',
+        style: {
+            color: 'white'
+        }
+    },
+};
+
+export const contactHeroHeadingLight = {
     h1Style: {
         marginTop: '-0.5em'
     },
@@ -317,13 +403,66 @@ export const contactHeroHeading = {
     },
 };
 
+export const contactHeroHeadingDark = {
+    h1Style: {
+        marginTop: '-0.5em'
+    },
+    a: {
+        text: "LET'S",
+        style: {
+            color: 'white',
+            display: 'block'
+        }
+    },
+    b: {
+        text: '',
+        style: {
+            color: ''
+        }
+    },
+    c: {
+        text: 'GET',
+        style: {
+            color: 'white',
+            display: 'block'
+        }
+    },
+    d: {
+        text: '',
+        style: {
+            color: ''
+        }
+    },
+    e: {
+        text: '',
+        style: {
+            color: ''
+        }
+    },
+    f: {
+        text: 'CONNECTED',
+        style: {
+            textDecoration: 'line-through',
+            fontStyle: 'italic',
+            color: '#2385C0',
+            display: 'block'
+        }
+    },
+};
+
 
 export const darkModeStyle = {
+    background: 'black',
     color: 'white',
     arrow: arrow_dark,
 
     homeHero: hero_dark,
     ellipse: ellipse_dark,
+    homeMyPortfolio: my_react_portfolio_light,
+    workMyPortfolio: {
+        a: my_react_portfolio_light,
+        b: my_react_portfolio_light_b
+    },
     selected_work: selected_work_dark,
     mechanicalSoftwareArrow: mechanical_software_arrow_dark,
 
@@ -332,5 +471,14 @@ export const darkModeStyle = {
 
     footerImage: footer_parallax_dark,
 
-    defaultToggleButton: light_mode
+    defaultToggleButton: light_mode,
+
+    border_left_top: {
+        borderTop: '2px solid white',
+        borderLeft: '2px solid white'
+    },
+    border_right_bottom: {
+        borderBottom: '2px solid white',
+        borderRight: '2px solid white'
+    }
 }

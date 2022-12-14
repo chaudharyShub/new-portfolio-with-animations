@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import LoadingBar from 'react-top-loading-bar';
 import { scrollToTop, loadTopBar } from '../Details';
 import about_me from '../../images/about_me.webp';
-import arrow from '../../images/arrow.svg';
 import 'atropos/css'
 import './About.css';
 import { Link } from 'react-scroll';
@@ -16,6 +15,7 @@ function About() {
     const style = context.state.style;
 
     const [progress, setProgress] = useState(0);
+    const windowWidth = window.innerWidth;
 
     useEffect(() => {
         scrollToTop();
@@ -23,20 +23,20 @@ function About() {
     }, []);
 
     const animation_border_left_top = {
-        borderTop: '2px solid #1D8BCF',
-        borderLeft: '2px solid #1D8BCF'
+        borderTop: `2px solid ${style.color}`,
+        borderLeft: `2px solid ${style.color}`
     }
 
     const animation_border_right_bottom = {
-        borderBottom: '2px solid #1D8BCF',
-        borderRight: '2px solid #1D8BCF'
+        borderBottom: `2px solid ${style.color}`,
+        borderRight: `2px solid ${style.color}`
     }
 
     return (
         <>
             <LoadingBar
                 height={2}
-                color='#1D8BCF'
+                color={style.color}
                 loaderSpeed={450}
                 progress={progress}
             />
@@ -49,9 +49,9 @@ function About() {
                     <div></div>
                     <span>out</span>
                     <span>me</span>
-                    <img src={arrow} alt="arrow" />
+                    <img src={style.arrow} alt="arrow" />
                 </h1>
-                <div className='about_main_inner'>
+                <div className='about_main_inner' style={windowWidth > 768 ? { borderTop: `1px solid ${style.color}` } : {}}>
                     <div className='about_hero_image'>
                         <Atropos
                             className='my_atropos'
@@ -73,8 +73,8 @@ function About() {
                             <br /> <br />
                             I started coding as a hobbie, but because of my increasing interest in creating and designing the web, I decided to switch my career from mechanical to web development and to achieve that I improved my techanical skills and learnt some programming languages =&gt; HTML, CSS, JavaScript, REACT.JS, C++, PYTHON, TAILWIND and started my new journey as a front-end web developer.
                         </p>
-                        <div className='download_resume'>
-                            <a style={{ color: style.color }} href='javascript:void(0)'>download resume <img className='submit_arrow' src={arrow} alt="arrow" /></a>
+                        <div style={{ borderBottom: `1px solid ${style.color}` }} className='download_resume'>
+                            <a style={{ color: style.color }} href='javascript:void(0)'>download resume <img className='submit_arrow' src={style.arrow} alt="arrow" /></a>
                         </div>
                     </div>
                 </div>

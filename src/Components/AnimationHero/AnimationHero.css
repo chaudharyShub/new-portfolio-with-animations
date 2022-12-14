@@ -16,6 +16,7 @@
     height: 100%;
     width: 100%;
     margin-top: 45px;
+    position: relative;
 }
 
 .hero_container>h1 {
@@ -52,6 +53,43 @@
     overflow: visible !important;
 }
 
+.atropos_animation_border_left_top,
+.atropos_animation_border_right_bottom {
+    display: none;
+}
+
+.hero_container:hover .atropos_animation_border_left_top,
+.hero_container:hover .atropos_animation_border_right_bottom {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.atropos_animation_border_left_top,
+.atropos_animation_border_right_bottom {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: 1s all ease !important;
+}
+
+.atropos_animation_border_left_top {
+    top: 0;
+    left: 0;
+    border-top: 2px solid;
+    border-left: 2px solid;
+}
+
+.atropos_animation_border_right_bottom {
+    right: 0;
+    bottom: 0;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
 @keyframes moveArrowY {
     from {
         transform: translateY(-10px)
@@ -64,7 +102,7 @@
 
 @media only screen and (min-width: 1024px) {
 
-    .hero_image {
+    .hero_container {
         width: 90%;
     }
 }

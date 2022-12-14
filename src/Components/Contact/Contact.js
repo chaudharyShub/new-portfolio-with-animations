@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import LoadingBar from 'react-top-loading-bar';
 import AnimationHero from '../AnimationHero/AnimationHero';
-import { scrollToTop, loadTopBar, contactHeroHeading } from '../Details';
+import { scrollToTop, loadTopBar, contactHeroHeading, contactHeroHeadingLight, contactHeroHeadingDark } from '../Details';
 import './Contact.css';
 import { StateContext } from '../../App';
 
@@ -21,13 +21,13 @@ function Contact() {
         <>
             <LoadingBar
                 height={2}
-                color='#1D8BCF'
+                color={style.color}
                 loaderSpeed={450}
                 progress={progress}
             />
             <AnimationHero
                 hero={style.contactMe}
-                text={contactHeroHeading}
+                text={context.state.mode ? contactHeroHeadingDark : contactHeroHeadingLight}
                 to={'contact_main'}
                 arrow={style.arrow}
             />

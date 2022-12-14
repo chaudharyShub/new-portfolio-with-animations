@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { StateContext } from '../../App';
 
+
 function Navbar() {
 
     const context = useContext(StateContext);
     const style = context.state.style;
-    // console.log(context.state);
+
+    const toggleModeButtonStyle = {
+        filter: 'invert(36%) sepia(98%) saturate(436%) hue-rotate(159deg) brightness(108%) contrast(95%)'
+    }
+    const navItems = ['home', 'about', 'work', 'contact'];
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [hideMiddleHamburger, setHideMiddleHamburger] = useState(true);
-
-    const navItems = ['home', 'about', 'work', 'contact'];
 
     const show = (e) => {
         if (e.target.innerText === 'DARK MODE' || e.target.innerText === 'LIGHT MODE') return;
@@ -20,16 +23,9 @@ function Navbar() {
         hideMiddleHamburger ? setHideMiddleHamburger(false) : setHideMiddleHamburger(true);
     }
 
-    const toggleModeButtonStyle = {
-        filter: 'invert(36%) sepia(98%) saturate(436%) hue-rotate(159deg) brightness(108%) contrast(95%)'
-    }
-
     const handleClick = () => {
-        if (context.state.mode) {
-            context.disableDarkMode();
-        } else {
-            context.enableDarkMode();
-        }
+        if (context.state.mode) context.disableDarkMode();
+        else context.enableDarkMode();
     }
 
     return (
@@ -38,12 +34,12 @@ function Navbar() {
             <div className='desktop_nav'>
                 <div></div>
                 <div className='desktop_nav_links'>
-                    <Link style={{ color: style.color }} to='about'>About</Link>
-                    <Link style={{ color: style.color }} to='work'>Work</Link>
+                    <Link style={{ color: style.color, borderColor: style.color }} to='about'>About</Link>
+                    <Link style={{ color: style.color, borderColor: style.color }} to='work'>Work</Link>
                     <button onClick={handleClick}>
                         <img style={!context.state.mode ? toggleModeButtonStyle : null} src={style.defaultToggleButton} alt='toggleMode' />
                     </button>
-                    <Link style={{ color: style.color }} to='contact'>Contact</Link>
+                    <Link style={{ color: style.color, borderColor: style.color }} to='contact'>Contact</Link>
                 </div>
             </div>
 

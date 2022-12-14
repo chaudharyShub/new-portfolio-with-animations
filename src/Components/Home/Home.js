@@ -13,7 +13,9 @@ import {
     scrollToTop,
     selectedWork,
     loadTopBar,
-    animationBoxId
+    animationBoxId,
+    homeHeroHeadingDark,
+    homeHeroHeadingLight
 } from '../Details';
 import './Home.css';
 import hero_me from '../../images/hero_me.webp';
@@ -52,14 +54,14 @@ function Home() {
         <>
             <LoadingBar
                 height={2}
-                color='#1D8BCF'
+                color={style.color}
                 loaderSpeed={450}
                 progress={progress}
             />
 
             <AnimationHero
                 hero={style.homeHero}
-                text={homeHeroHeading}
+                text={context.state.mode ? homeHeroHeadingDark : homeHeroHeadingLight}
                 to={'section_2'}
                 arrow={style.arrow}
             />
@@ -91,7 +93,7 @@ function Home() {
                     </div>
                     <div className='languages_follow' style={{ color: style.color }}>
                         <div className="languages">
-                            <h5>languages</h5>
+                            <h5 style={{ borderBottom: `1px solid ${style.color}` }}>languages</h5>
                             <ul>
                                 {
                                     languages.map(language => (
@@ -101,12 +103,12 @@ function Home() {
                             </ul>
                         </div>
                         <div className="follow_me">
-                            <h5>follow me</h5>
+                            <h5 style={{ borderBottom: `1px solid ${style.color}` }}>follow me</h5>
                             <ul>
                                 {
                                     follow_me.map(social => (
                                         <li key={social.platform}>
-                                            <a style={{ color: style.color }} href={social.link} target='_blank'>
+                                            <a style={{ color: style.color, borderBottom: `1.3px solid ${style.color}` }} href={social.link} target='_blank'>
                                                 {social.platform}
                                             </a>
                                         </li>

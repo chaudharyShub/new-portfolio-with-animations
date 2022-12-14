@@ -27,8 +27,7 @@
 .lets_connect h2 {
     font-weight: 600;
     font-size: 2.5rem;
-    color: #1D8BCF;
-    border-bottom: 1.3px solid #1D8BCF;
+    border-bottom: 1.3px solid;
     line-height: 40px;
 }
 
@@ -47,8 +46,6 @@
 }
 
 .form_container form {
-    border-bottom: 1.5px solid #1D8BCF;
-    border-right: 1.5px solid #1D8BCF;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -56,7 +53,6 @@
 }
 
 .form_container form>h3 {
-    color: #1D8BCF;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.2rem;
@@ -64,21 +60,33 @@
 }
 
 .form_container>div {
-    border-top: 1.5px solid #1D8BCF;
     width: 10%;
 }
 
 .form_container form input::placeholder,
 textarea::placeholder {
     color: #1D8BCF;
-    opacity: 0.5;
+    opacity: 0.7;
+}
+
+.form_container form input::-webkit-input-placeholder,
+.form_container form textarea::-webkit-input-placeholder {
+    color: var(--placeholder-color);
+}
+
+.form_container form input::-moz-placeholder,
+.form_container form textarea::-moz-placeholder {
+    color: var(--placeholder-color);
+}
+
+.form_container form input::placeholder,
+.form_container form textarea::placeholder {
+    color: var(--placeholder-color);
 }
 
 .form_container form input,
 textarea {
     all: unset;
-    border-bottom: 1px solid #1D8BCF;
-    color: #1D8BCF;
 }
 
 .form_container form input {
@@ -92,14 +100,11 @@ textarea {
 .form_container form button {
     all: unset;
     cursor: pointer;
-    color: #E3ECD4;
     margin: 2em 0;
     width: fit-content;
     display: inline-flex;
-    border: 1px solid #1D8BCF;
-    background: #1D8BCF;
     border-radius: 7px;
-    padding: 7px 12px 7px 7px;
+    padding: 8px 12px 8px 8px;
     transition: 0.3s ease;
 }
 
@@ -118,7 +123,7 @@ textarea {
 }
 
 .form_container form button:hover {
-    padding: 7px 27px 7px 7px;
+    padding: 8px 27px 8px 8px;
 }
 
 .social_media_container {
@@ -147,7 +152,6 @@ textarea {
 
 .social_media a {
     text-decoration: underline;
-    color: #1D8BCF;
     display: flex;
     justify-content: space-between;
 }
@@ -211,7 +215,7 @@ textarea {
 
     .social_media_container {
         width: 50%;
-        border-top: 1.5px solid #1D8BCF;
+        border-top: 1.5px solid;
         margin-top: 40px;
         justify-content: center;
         align-items: center;
@@ -246,7 +250,7 @@ textarea {
     }
 
     .lets_connect h2 {
-        border-bottom: 2.3px solid #1D8BCF;
+        border-bottom: 2.3px solid;
     }
 
     .form_container form>h3 {

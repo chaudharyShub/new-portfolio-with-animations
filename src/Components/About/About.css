@@ -5,7 +5,6 @@
 }
 
 .about_main h1 {
-    /* color: #1D8BCF; */
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -55,7 +54,7 @@
     width: 0;
     height: 0;
     z-index: -5;
-    transition: 0.5s ease;
+    transition: 0.8s ease !important;
 }
 
 .animation_border_right_bottom {
@@ -66,7 +65,7 @@
     width: 0;
     height: 0;
     z-index: -5;
-    transition: 0.5s ease;
+    transition: 0.8s ease !important;
 }
 
 .my_atropos {
@@ -105,7 +104,6 @@
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
-    /* border-bottom: 1px solid #1D8BCF; */
     margin: 2em 0 7em;
     font-size: 13px;
 }
@@ -221,7 +219,6 @@
         align-items: flex-start;
         margin-bottom: 7em;
         margin-top: 1em;
-        /* border-top: 1px solid #1D8BCF; */
         padding-top: 3em;
     }
 

@@ -163,7 +163,7 @@ p {
 }
 
 .follow_me_desktop ul a:hover {
-    /* border-bottom: 0px solid #1D8BCF; */
+    border-bottom: 0px solid  !important;
 }
 
 .languages_desktop h5 {
@@ -248,7 +248,7 @@ p {
     font-size: 1.2rem;
     font-weight: 500;
     text-transform: capitalize;
-    border-bottom: 1px solid #1D8BCF;
+    
     margin-bottom: 10px;
     padding-bottom: 5px;
 }
@@ -279,11 +279,6 @@ p {
 
 .follow_me h5 {
     padding-right: 20px;
-}
-
-.follow_me a {
-    /* color: #1D8BCF; */
-    /* border-bottom: 1px solid #1D8BCF; */
 }
 
 .section_3 {
