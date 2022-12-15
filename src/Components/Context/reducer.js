@@ -8,6 +8,7 @@ import mechanical_software_arrow from '../../images/mechanical_software_arrow.sv
 import glimpse_light from '../../images/glimpse_light.webp';
 import footer_parallax from '../../images/footer_parallax.webp';
 import dark_mode from '../../images/dark_mode.png';
+import { darkModeStyle } from '../Details';
 
 
 export const initialState = {
@@ -33,7 +34,7 @@ export const initialState = {
         footerImage: footer_parallax,
 
         defaultToggleButton: dark_mode,
-        
+
         border_left_top: {
             borderTop: '2px solid #1D8BCF',
             borderLeft: '2px solid #1D8BCF'
@@ -46,14 +47,18 @@ export const initialState = {
 }
 
 export const reducer = (state, action) => {
-    switch (action.type) {
+    switch (action) {
+
         case 'ENABLE_DARK_MODE':
+            localStorage.setItem('mode', true);
             return {
                 ...state,
                 mode: true,
-                style: action.payload
+                style: darkModeStyle
             }
+
         case 'DISABLE_DARK_MODE':
+            localStorage.setItem('mode', false);
             return initialState;
 
         default:

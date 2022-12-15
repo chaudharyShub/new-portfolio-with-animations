@@ -1,10 +1,9 @@
-import React, { createContext, useReducer } from "react";
-import './App.css';
+import React, { createContext, useEffect, useReducer } from "react";
 import { initialState, reducer } from "./Components/Context/reducer";
-import { darkModeStyle } from "./Components/Details";
 import Footer from "./Components/Footer/Footer";
 import Navbar from './Components/Navbar/Navbar';
 import Element from './Components/Routing/Element';
+import './App.css';
 
 export const StateContext = createContext();
 
@@ -12,17 +11,18 @@ function App() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const enableDarkMode = () => {
-    dispatch({
-      type: 'ENABLE_DARK_MODE',
-      payload: darkModeStyle
-    });
+  const enableDarkMode = () => dispatch('ENABLE_DARK_MODE');
+  const disableDarkMode = () => dispatch('DISABLE_DARK_MODE');
+
+  const setModeInLocalStorage = mode => {
+    if (mode === 'true') enableDarkMode();
+    else disableDarkMode();
   }
 
-  const disableDarkMode = () => {
-    dispatch({
-      type: 'DISABLE_DARK_MODE'
-    });
+  const getModeFromLocalStorage = () => {
+    const mode = localStorage.getItem('mode');
+    if (mode === null) localStorage.setItem('mode', true);
+    else setModeInLocalStorage(mode);
   }
 
   const value = {
@@ -30,6 +30,10 @@ function App() {
     enableDarkMode,
     disableDarkMode
   }
+
+  useEffect(() => {
+    getModeFromLocalStorage();
+  }, [state.mode]);
 
   return (
     <StateContext.Provider value={value}>
