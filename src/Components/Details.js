@@ -219,7 +219,6 @@ export const homeHeroHeadingLight = {
         text: 'INDIA',
         style: {
             fontStyle: 'italic',
-            textDecoration: 'underline',
             color: '#1D8BCF'
         }
     },
@@ -260,7 +259,6 @@ export const homeHeroHeadingDark = {
         text: 'INDIA',
         style: {
             fontStyle: 'italic',
-            textDecoration: 'underline',
             color: 'white'
         }
     },
@@ -279,7 +277,6 @@ export const workHeroHeadingLight = {
     b: {
         text: 'GLIMPSES',
         style: {
-            textDecoration: 'underline',
             fontStyle: 'italic',
             color: 'white',
             display: 'block'
@@ -324,7 +321,6 @@ export const workHeroHeadingDark = {
     b: {
         text: 'GLIMPSES',
         style: {
-            textDecoration: 'underline',
             fontStyle: 'italic',
             color: '#CF00A5',
             display: 'block'
@@ -395,7 +391,6 @@ export const contactHeroHeadingLight = {
     f: {
         text: 'CONNECTED',
         style: {
-            textDecoration: 'underline',
             fontStyle: 'italic',
             color: 'white',
             display: 'block'
@@ -442,7 +437,6 @@ export const contactHeroHeadingDark = {
     f: {
         text: 'CONNECTED',
         style: {
-            textDecoration: 'underline',
             fontStyle: 'italic',
             color: '#2385C0',
             display: 'block'
