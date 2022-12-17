@@ -1,6 +1,6 @@
 .section_1 {
     overflow: hidden;
-    height: 105vh;
+    height: 98vh;
     position: relative;
 }
 
@@ -106,4 +106,10 @@
     .hero_container {
         width: 90%;
     }
+    
+    .section_1 {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
 }
