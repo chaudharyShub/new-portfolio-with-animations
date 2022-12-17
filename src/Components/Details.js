@@ -212,14 +212,14 @@ export const homeHeroHeadingLight = {
     e: {
         text: 'FROM',
         style: {
-            textDecoration: 'underline',
-            fontStyle: 'italic',
             color: 'white'
         }
     },
     f: {
         text: 'INDIA',
         style: {
+            fontStyle: 'italic',
+            textDecoration: 'underline',
             color: '#1D8BCF'
         }
     },
@@ -253,14 +253,14 @@ export const homeHeroHeadingDark = {
     e: {
         text: 'FROM',
         style: {
-            textDecoration: 'underline',
-            fontStyle: 'italic',
             color: 'white'
         }
     },
     f: {
         text: 'INDIA',
         style: {
+            fontStyle: 'italic',
+            textDecoration: 'underline',
             color: 'white'
         }
     },
