@@ -258,10 +258,12 @@ export const homeHeroHeadingDark = {
     f: {
         text: 'INDIA',
         style: {
-            fontStyle: 'italic',
-            background: -webkit-linear-gradient(#FF9933, 'white', #138808);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+               fontStyle: 'italic',
+                color: 'white',
+//             background: linear-gradient(to right, #FF9933, white, #138808);
+//             -webkit-background-clip: text;
+//             -webkit-text-fill-color: transparent;
+//             text-shadow: none;
         }
     },
 };
