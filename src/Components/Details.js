@@ -212,7 +212,7 @@ export const homeHeroHeadingLight = {
     e: {
         text: 'FROM',
         style: {
-            textDecoration: 'line-through',
+            textDecoration: 'underline',
             fontStyle: 'italic',
             color: 'white'
         }
@@ -253,7 +253,7 @@ export const homeHeroHeadingDark = {
     e: {
         text: 'FROM',
         style: {
-            textDecoration: 'line-through',
+            textDecoration: 'underline',
             fontStyle: 'italic',
             color: 'white'
         }
@@ -279,7 +279,7 @@ export const workHeroHeadingLight = {
     b: {
         text: 'GLIMPSES',
         style: {
-            textDecoration: 'line-through',
+            textDecoration: 'underline',
             fontStyle: 'italic',
             color: 'white',
             display: 'block'
@@ -324,7 +324,7 @@ export const workHeroHeadingDark = {
     b: {
         text: 'GLIMPSES',
         style: {
-            textDecoration: 'line-through',
+            textDecoration: 'underline',
             fontStyle: 'italic',
             color: '#CF00A5',
             display: 'block'
@@ -395,7 +395,7 @@ export const contactHeroHeadingLight = {
     f: {
         text: 'CONNECTED',
         style: {
-            textDecoration: 'line-through',
+            textDecoration: 'underline',
             fontStyle: 'italic',
             color: 'white',
             display: 'block'
@@ -442,7 +442,7 @@ export const contactHeroHeadingDark = {
     f: {
         text: 'CONNECTED',
         style: {
-            textDecoration: 'line-through',
+            textDecoration: 'underline',
             fontStyle: 'italic',
             color: '#2385C0',
             display: 'block'
