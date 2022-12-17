@@ -103,6 +103,8 @@ p {
     width: 40%;
     object-fit: cover;
     max-width: 14em;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .mech_to_web {
