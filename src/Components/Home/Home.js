@@ -22,7 +22,7 @@ import hero_me from '../../images/hero_me.webp';
 
 function Home() {
 
-    document.title = "Shubham Chaudhary";
+    document.title = "Shubham Chaudhary | Front End Developer";
 
     const context = useContext(StateContext);
     const style = context.state.style;
