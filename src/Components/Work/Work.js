@@ -26,7 +26,7 @@ function Work() {
         !context.topLoadingBarState.workTopLoadingBar && loadTopBar(setProgress, 20, 500);
         setTimeout(() => {
             context.topLoadingBarDispatch('DISABLE_WORK_TOP_LOADING_BAR');
-        }, 3000);
+        }, 2000);
     }, []);
 
     return (

@@ -34,7 +34,7 @@ function Home() {
         !context.topLoadingBarState.homeTopLoadingBar && loadTopBar(setProgress, 70, 500);
         setTimeout(() => {
             context.topLoadingBarDispatch('DISABLE_HOME_TOP_LOADING_BAR');
-        }, 3000);
+        }, 2000);
     }, []);
 
     const image = document.getElementsByClassName('selected_work');

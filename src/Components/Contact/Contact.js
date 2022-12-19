@@ -19,7 +19,7 @@ function Contact() {
         !context.topLoadingBarState.contactTopLoadingBar && loadTopBar(setProgress, 80, 800);
         setTimeout(() => {
             context.topLoadingBarDispatch('DISABLE_CONTACT_TOP_LOADING_BAR');
-        }, 3000);
+        }, 2000);
     }, []);
 
     return (

@@ -24,7 +24,7 @@ function About() {
         !context.topLoadingBarState.aboutTopLoadingBar && loadTopBar(setProgress, 40, 400);
         setTimeout(() => {
             context.topLoadingBarDispatch('DISABLE_ABOUT_TOP_LOADING_BAR');
-        }, 3000);
+        }, 2000);
     }, []);
 
     const animation_border_left_top = {
