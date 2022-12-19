@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import LoadingBar from 'react-top-loading-bar';
 import AnimationHero from '../AnimationHero/AnimationHero';
-import { scrollToTop, loadTopBar, contactHeroHeading, contactHeroHeadingLight, contactHeroHeadingDark } from '../Details';
-import './Contact.css';
+import { scrollToTop, loadTopBar, contactHeroHeadingLight, contactHeroHeadingDark } from '../Details';
 import { StateContext } from '../../App';
+import './Contact.css';
 
 
 function Contact() {
+
+    document.title = "Shubham Chaudhary | Contact";
 
     const [progress, setProgress] = useState(0);
     const context = useContext(StateContext);
@@ -14,7 +16,10 @@ function Contact() {
 
     useEffect(() => {
         scrollToTop();
-        loadTopBar(setProgress, 80, 900);
+        !context.topLoadingBarState.contactTopLoadingBar && loadTopBar(setProgress, 80, 800);
+        setTimeout(() => {
+            context.topLoadingBarDispatch('DISABLE_CONTACT_TOP_LOADING_BAR');
+        }, 3000);
     }, []);
 
     return (
@@ -22,7 +27,7 @@ function Contact() {
             <LoadingBar
                 height={2}
                 color={style.color}
-                loaderSpeed={450}
+                loaderSpeed={350}
                 progress={progress}
             />
             <AnimationHero
@@ -37,8 +42,6 @@ function Contact() {
                         width="100%"
                         height="400"
                         style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                     >
                     </iframe>
@@ -47,7 +50,7 @@ function Contact() {
                     <div className='contact_phone_email'>
                         <p>phone</p>
                         <img src={style.arrow} alt="" />
-                        <p>+9315583873</p>
+                        <p>+91-9315583873</p>
                     </div>
                     <div className="contact_phone_email">
                         <p>email</p>

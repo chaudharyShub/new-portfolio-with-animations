@@ -7,7 +7,6 @@ import SelectedWork from '../SelectedWork/SelectedWork';
 import { StateContext } from '../../App';
 import {
     follow_me,
-    homeHeroHeading,
     languages,
     mechanical_software,
     scrollToTop,
@@ -23,6 +22,8 @@ import hero_me from '../../images/hero_me.webp';
 
 function Home() {
 
+    document.title = "Shubham Chaudhary";
+
     const context = useContext(StateContext);
     const style = context.state.style;
 
@@ -30,7 +31,10 @@ function Home() {
 
     useEffect(() => {
         scrollToTop();
-        loadTopBar(setProgress, 70, 500);
+        !context.topLoadingBarState.homeTopLoadingBar && loadTopBar(setProgress, 70, 500);
+        setTimeout(() => {
+            context.topLoadingBarDispatch('DISABLE_HOME_TOP_LOADING_BAR');
+        }, 3000);
     }, []);
 
     const image = document.getElementsByClassName('selected_work');

@@ -2,12 +2,19 @@ import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
 import AnimationHero from '../AnimationHero/AnimationHero';
-import { loadTopBar, workHeroHeading, scrollToTop, workHeroHeadingDark, workHeroHeadingLight } from '../Details';
+import {
+    loadTopBar,
+    scrollToTop,
+    workHeroHeadingDark,
+    workHeroHeadingLight
+} from '../Details';
 import { StateContext } from '../../App';
 import './Work.css';
 
 
 function Work() {
+
+    document.title = "Shubham Chaudhary | Work";
 
     const context = useContext(StateContext);
     const style = context.state.style;
@@ -16,7 +23,10 @@ function Work() {
 
     useEffect(() => {
         scrollToTop();
-        loadTopBar(setProgress, 20, 500);
+        !context.topLoadingBarState.workTopLoadingBar && loadTopBar(setProgress, 20, 500);
+        setTimeout(() => {
+            context.topLoadingBarDispatch('DISABLE_WORK_TOP_LOADING_BAR');
+        }, 3000);
     }, []);
 
     return (

@@ -11,6 +11,8 @@ import { StateContext } from '../../App';
 
 function About() {
 
+    document.title = "Shubham Chaudhary | About";
+
     const context = useContext(StateContext);
     const style = context.state.style;
 
@@ -19,7 +21,10 @@ function About() {
 
     useEffect(() => {
         scrollToTop();
-        loadTopBar(setProgress, 40, 400);
+        !context.topLoadingBarState.aboutTopLoadingBar && loadTopBar(setProgress, 40, 400);
+        setTimeout(() => {
+            context.topLoadingBarDispatch('DISABLE_ABOUT_TOP_LOADING_BAR');
+        }, 3000);
     }, []);
 
     const animation_border_left_top = {
@@ -37,7 +42,7 @@ function About() {
             <LoadingBar
                 height={2}
                 color={style.color}
-                loaderSpeed={450}
+                loaderSpeed={300}
                 progress={progress}
             />
             <div className='about_main' style={{ color: style.color }}>

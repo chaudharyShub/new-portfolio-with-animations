@@ -1,5 +1,5 @@
 import algoexpert from '../images/algoexpert.webp';
-import js_form_validation from '../images/js_form_validation.webp';
+import js_form_validation_ from '../images/js_form_validation_.webp';
 import pokemon from '../images/pokemon.webp';
 import algoexpert_2 from '../images/algoexpert_2.webp';
 import my_react_portfolio_light from '../images/my_react_portfolio_light.webp';
@@ -122,7 +122,7 @@ export const selectedWork = [
     {
         id: '03/',
         name: 'js form validation',
-        image: js_form_validation,
+        image: js_form_validation_,
         link: 'https://form-validation-using-java-script.vercel.app/create-form'
     },
     {
@@ -258,12 +258,12 @@ export const homeHeroHeadingDark = {
     f: {
         text: 'INDIA',
         style: {
-               fontStyle: 'italic',
-                color: 'white',
-//             background: linear-gradient(to right, #FF9933, white, #138808);
-//             -webkit-background-clip: text;
-//             -webkit-text-fill-color: transparent;
-//             text-shadow: none;
+            fontStyle: 'italic',
+            color: 'white',
+            //             background: linear-gradient(to right, #FF9933, white, #138808);
+            //             -webkit-background-clip: text;
+            //             -webkit-text-fill-color: transparent;
+            //             text-shadow: none;
         }
     },
 };

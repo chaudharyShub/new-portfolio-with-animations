@@ -4,12 +4,14 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from './Components/Navbar/Navbar';
 import Element from './Components/Routing/Element';
 import './App.css';
+import { disableTopLoadingBar, topLoadingBarInitialState } from "./Components/Context/topLoadingBarDisableReducer";
 
 export const StateContext = createContext();
 
 function App() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [topLoadingBarState, topLoadingBarDispatch] = useReducer(disableTopLoadingBar, topLoadingBarInitialState);
 
   const enableDarkMode = () => dispatch('ENABLE_DARK_MODE');
   const disableDarkMode = () => dispatch('DISABLE_DARK_MODE');
@@ -28,7 +30,10 @@ function App() {
   const value = {
     state,
     enableDarkMode,
-    disableDarkMode
+    disableDarkMode,
+
+    topLoadingBarState,
+    topLoadingBarDispatch
   }
 
   useEffect(() => {

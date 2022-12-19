@@ -96,7 +96,7 @@
 
 .about_text_div>p {
     font-size: 13px;
-    line-height: 18px;
+    line-height: 21px;
 }
 
 .download_resume {
@@ -237,7 +237,6 @@
     }
 
     .about_text_div>p {
-        line-height: 20px;
         padding-right: 2em;
     }
 
