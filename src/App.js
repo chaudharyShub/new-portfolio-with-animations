@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useReducer } from "react";
 import { initialState, reducer } from "./Components/Context/reducer";
+import AOS from 'aos';
 import Footer from "./Components/Footer/Footer";
 import Navbar from './Components/Navbar/Navbar';
 import Element from './Components/Routing/Element';
@@ -39,6 +40,17 @@ function App() {
   useEffect(() => {
     getModeFromLocalStorage();
   }, [state.mode]);
+
+  useEffect(() => {
+    AOS.init({
+      animatedClassName: 'aos-animate',
+      duration: 700,
+      easing: 'ease',
+      once: true,
+      debounceDelay: 80,
+      anchorPlacement: 'top-bottom'
+    });
+  }, []);
 
   return (
     <StateContext.Provider value={value}>

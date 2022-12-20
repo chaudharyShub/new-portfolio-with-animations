@@ -46,7 +46,7 @@ function Contact() {
                     >
                     </iframe>
                 </p>
-                <div className="contact_details_container" style={{ color: style.color }}>
+                <div className="contact_details_container" data-aos="fade-up" style={{ color: style.color }}>
                     <div className='contact_phone_email'>
                         <p>phone</p>
                         <img src={style.arrow} alt="" />

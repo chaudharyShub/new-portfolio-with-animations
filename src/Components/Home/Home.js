@@ -73,7 +73,7 @@ function Home() {
             <section id='section_2' className='section_2'>
                 <img className='ellipse_1' src={style.ellipse} alt="background" />
                 <div className='section_2_inner'>
-                    <Link className='about_link' to='/about' style={{ color: style.color }}>
+                    <Link className='about_link' data-aos="fade-up" to='/about' style={{ color: style.color }}>
                         <span>
                             about
                             <div className='hidden_div'></div>
@@ -81,10 +81,10 @@ function Home() {
                         </span>
                         <div className='hidden_div_2'></div>
                         <img className='right_arrow' src={style.arrow} alt='arrow' />
-                        <span className='DOB'>1995</span>
                     </Link>
-                    <h2 style={{ color: style.color }}>shubham chaudhary</h2>
-                    <div className='mech_to_web'>
+                    <span className='DOB' data-aos="fade-up" style={{ color: style.color }}>1995</span>
+                    <h2 style={{ color: style.color }} data-aos="fade-up">shubham chaudhary</h2>
+                    <div className='mech_to_web' data-aos="fade-up">
                         <img className='hero_me' src={hero_me} alt="myself" />
                         <div className='mech_to_web_text' style={{ color: style.color }}>
                             <h4 >front-end developer</h4>
@@ -95,7 +95,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className='languages_follow' style={{ color: style.color }}>
+                    <div className='languages_follow' data-aos="fade-up" style={{ color: style.color }}>
                         <div className="languages">
                             <h5 style={{ borderBottom: `1px solid ${style.color}` }}>languages</h5>
                             <ul>
@@ -123,7 +123,7 @@ function Home() {
                     </div>
 
                     {/* DESKTOP */}
-                    <div className='mech_to_web_desktop'>
+                    <div className='mech_to_web_desktop' data-aos="fade-up" data-aos-delay="100">
                         <div className='mech_to_web_desktop_text_image'>
                             <div className='mech_to_web_text_desktop' style={{ color: style.color }}>
                                 <h4 >front-end developer</h4>
@@ -177,7 +177,7 @@ function Home() {
 
             <section className='section_3'>
                 <div className='animation_mechanical_software_container'>
-                    <div id="wrapper">
+                    <div id="wrapper" data-aos="fade-up">
                         <div className="box-area">
                             {
                                 animationBoxId.map(id => <div key={id} id={id} className="box"></div>)
@@ -185,7 +185,7 @@ function Home() {
                         </div>
                     </div>
                     <div></div>
-                    <div className='mechanical_software' style={{ color: style.color }}>
+                    <div className='mechanical_software' data-aos="fade-up" style={{ color: style.color }}>
                         {
                             mechanical_software.map(items => {
                                 if (items.className === 'arrow') {
@@ -204,7 +204,7 @@ function Home() {
                         }
                     </div>
                 </div>
-                <div className="selected_work_container">
+                <div className="selected_work_container" data-aos="fade-up">
                     <img className="selected_work" src={style.selected_work} alt="selected_work" />
                     <div className='selected_work_text'>
                         <p>SELE</p>
@@ -229,7 +229,7 @@ function Home() {
                         />
                     ))
                 }
-                <div className='see_more'>
+                <div className='see_more' data-aos="fade-up">
                     <Link to='/work' style={{
                         color: style.color,
                         borderBottom: `1px solid ${style.color}`

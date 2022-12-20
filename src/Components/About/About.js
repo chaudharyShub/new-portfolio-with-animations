@@ -46,7 +46,7 @@ function About() {
                 progress={progress}
             />
             <div className='about_main' style={{ color: style.color }}>
-                <h1>
+                <h1 data-aos="fade-up">
                     <span>somet</span>
                     <div></div>
                     <span>hing</span>
@@ -56,7 +56,7 @@ function About() {
                     <span>me</span>
                     <img src={style.arrow} alt="arrow" />
                 </h1>
-                <div className='about_main_inner' style={windowWidth > 768 ? { borderTop: `1px solid ${style.color}` } : {}}>
+                <div className='about_main_inner' data-aos-delay="200" data-aos="fade-up" style={windowWidth > 768 ? { borderTop: `1px solid ${style.color}` } : {}}>
                     <div className='about_hero_image'>
                         <Atropos
                             className='my_atropos'

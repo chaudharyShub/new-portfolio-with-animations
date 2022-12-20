@@ -68,7 +68,7 @@ function Footer() {
                     <img className="selected_work_footer" src={style.footerImage} alt="selected_work" />
                     <img className='footer_parallax_arrow' src={style.arrow} alt='arrow' />
                 </div>
-                <div className='lets_connect_parent'>
+                <div className='lets_connect_parent' data-aos="fade-up">
                     <div></div>
                     <div className='lets_connect'>
                         <h2 style={{ color: style.color, borderColor: style.color }}>Let's </h2>
@@ -76,7 +76,7 @@ function Footer() {
                         <p style={{ color: style.color }}>Get in touch</p>
                     </div>
                 </div>
-                <div className='form_social_container'>
+                <div className='form_social_container' data-aos="fade-up" data-aos-delay="200">
                     <div className="form_container">
                         <form onSubmit={sendEmail} ref={form} style={{
                             borderBottom: `1.5px solid ${style.color}`,
