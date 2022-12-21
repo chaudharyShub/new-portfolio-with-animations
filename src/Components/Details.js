@@ -119,21 +119,21 @@ export const selectedWork = [
         name: 'my react portfolio',
         image: null,
         link: 'http://chaudharyshubham.com/',
-        data_aos_offset: 300
+        data_aos_offset: 200
     },
     {
         id: '03/',
         name: 'js form validation',
         image: js_form_validation_,
         link: 'https://form-validation-using-java-script.vercel.app/create-form',
-        data_aos_offset: 400
+        data_aos_offset: 200
     },
     {
         id: '04/',
         name: 'pokemon app',
         image: pokemon,
         link: 'https://pokemon-app-dusky-psi.vercel.app/home',
-        data_aos_offset: 500
+        data_aos_offset: 200
     },
 ];
 
