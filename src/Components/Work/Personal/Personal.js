@@ -17,7 +17,7 @@ function Personal() {
                 personalWork.map((items, index) => {
                     const a = personalWork[1].content.split('|')
                     return (
-                        <div key={items.sno} style={{ color: style.color }} data-aos="fade-up" data-aos-offset={windowWidth > 1024 && items.data_aos_offset} className='personal_main_inner_container'>
+                        <div key={items.sno} style={{ color: style.color }} data-aos="fade-up" data-aos-offset={windowWidth > 1024 && 200} className='personal_main_inner_container'>
                             <h5 style={{ color: style.color, borderBottomColor: style.color }}>{items.sno}</h5>
                             <div className='personal_inner'>
                                 <div className='personal_top'>
