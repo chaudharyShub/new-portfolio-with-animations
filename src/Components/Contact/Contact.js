@@ -13,6 +13,7 @@ function Contact() {
     const [progress, setProgress] = useState(0);
     const context = useContext(StateContext);
     const style = context.state.style;
+    const windowWidth = window.innerWidth;
 
     useEffect(() => {
         scrollToTop();
@@ -46,7 +47,7 @@ function Contact() {
                     >
                     </iframe>
                 </p>
-                <div className="contact_details_container" data-aos="fade-up" style={{ color: style.color }}>
+                <div className="contact_details_container" data-aos-offset={windowWidth > 1024 && 200} data-aos="fade-up" style={{ color: style.color }}>
                     <div className='contact_phone_email'>
                         <p>phone</p>
                         <img src={style.arrow} alt="" />

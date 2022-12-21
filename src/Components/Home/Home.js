@@ -204,7 +204,7 @@ function Home() {
                         }
                     </div>
                 </div>
-                <div className="selected_work_container" data-aos="fade-up">
+                <div className="selected_work_container">
                     <img className="selected_work" src={style.selected_work} alt="selected_work" />
                     <div className='selected_work_text'>
                         <p>SELE</p>
@@ -225,6 +225,7 @@ function Home() {
                             name={work.name}
                             img={work.image}
                             link={work.link}
+                            data_aos_offset={work.data_aos_offset}
                             style={{ color: style.color }}
                         />
                     ))

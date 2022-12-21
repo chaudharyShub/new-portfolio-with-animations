@@ -3,10 +3,11 @@ import { StateContext } from '../../App';
 import './SelectedWork.css';
 
 
-function SelectedWork({ id, name, img, link }) {
+function SelectedWork({ id, name, img, link, data_aos_offset }) {
 
     const context = useContext(StateContext);
     const style = context.state.style;
+    const windowWidth = window.innerWidth;
 
     const [color, setColor] = useState('#E3ECD4');
     const [translateArrow, setTranslateArrow] = useState(false);
@@ -34,8 +35,8 @@ function SelectedWork({ id, name, img, link }) {
     };
 
     return (
-        <div className='work_container' data-aos="fade-up" data-aos-delay="100" style={{ color: style.color, borderBottom: `1.5px solid ${style.color}` }}>
-            <div className='work'>
+        <div className='work_container' style={{ color: style.color, borderBottom: `1.5px solid ${style.color}` }}>
+            <div className='work' data-aos="fade-up" data-aos-offset={windowWidth > 1024 && data_aos_offset}>
                 <div className='work_left'>
                     <h5 style={{ color: style.color }}>{id}</h5>
                     <div className='work_left_text'>

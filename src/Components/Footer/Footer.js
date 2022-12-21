@@ -76,7 +76,7 @@ function Footer() {
                         <p style={{ color: style.color }}>Get in touch</p>
                     </div>
                 </div>
-                <div className='form_social_container' data-aos="fade-up" data-aos-delay="200">
+                <div className='form_social_container' data-aos="fade-up">
                     <div className="form_container">
                         <form onSubmit={sendEmail} ref={form} style={{
                             borderBottom: `1.5px solid ${style.color}`,

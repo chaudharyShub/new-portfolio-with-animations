@@ -46,7 +46,7 @@ function App() {
       animatedClassName: 'aos-animate',
       duration: 700,
       easing: 'ease',
-      once: true,
+      once: false,
       debounceDelay: 80,
       anchorPlacement: 'top-bottom'
     });
