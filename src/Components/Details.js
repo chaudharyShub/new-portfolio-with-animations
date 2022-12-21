@@ -126,14 +126,14 @@ export const selectedWork = [
         name: 'js form validation',
         image: js_form_validation_,
         link: 'https://form-validation-using-java-script.vercel.app/create-form',
-        data_aos_offset: 620
+        data_aos_offset: 500
     },
     {
         id: '04/',
         name: 'pokemon app',
         image: pokemon,
         link: 'https://pokemon-app-dusky-psi.vercel.app/home',
-        data_aos_offset: 800
+        data_aos_offset: 700
     },
 ];
 
@@ -145,7 +145,7 @@ export const personalWork = [
         link: 'https://chaudharyshub.github.io/AlgoExpert-CLone-React.Js/',
         heading: 'algoexpert clone',
         content: "Created a clone website of online Interview preparing platform 'AlgoExpert.io' on React.JS and styled using custom CSS",
-        data_aos_offset: 120
+        data_aos_offset: 100
     },
     {
         sno: '02/',
@@ -154,7 +154,7 @@ export const personalWork = [
         link: 'http://chaudharyshubham.com/',
         heading: 'my react portfolio',
         content: "This is my personal portfolio website. Designed on FIGMA, developed on React.Js and custom CSS. To view FIGMA design, | click here.",
-        data_aos_offset: 400
+        data_aos_offset: 300
     },
     {
         sno: '03/',
@@ -163,7 +163,7 @@ export const personalWork = [
         link: 'https://form-validation-using-java-script.vercel.app/create-form',
         heading: 'js form validation',
         content: "A CRUD app which JavaScript for form validation. On form submission data is stored inside the localStorage which can be edited and deleted later.",
-        data_aos_offset: 600
+        data_aos_offset: 550
     },
     {
         sno: '04/',
@@ -172,7 +172,7 @@ export const personalWork = [
         link: 'https://pokemon-app-dusky-psi.vercel.app/home',
         heading: 'pokemon app',
         content: "This app fetches the data from an API provided by ‘pokeapi.co’ and displays the details of the pokemon. It uses React Routing and React Context API.",
-        data_aos_offset: 900
+        data_aos_offset: 780
     },
     {
         sno: '05/',
@@ -181,7 +181,7 @@ export const personalWork = [
         link: 'http://www.chaudharyshubham.com/Indian%20Shatabdi%20news/index%20(news).html',
         heading: 'indian shatabdi news',
         content: "Indian Shatabdi News news website fetches latest news updates from api provided by 'News API' using JavaScript's AJAX method.",
-        data_aos_offset: 1200
+        data_aos_offset: 1100
     },
     {
         sno: '06/',
@@ -190,7 +190,7 @@ export const personalWork = [
         link: 'http://www.chaudharyshubham.com/Postmaster/index%20(postmaster).html',
         heading: 'postmaster',
         content: "PostMaster is an utility platform which can make 'GET' and 'POST' requests on an api using JavaScript's Fetch Api method. ",
-        data_aos_offset: 1500
+        data_aos_offset: 1400
     },
 ];
 
