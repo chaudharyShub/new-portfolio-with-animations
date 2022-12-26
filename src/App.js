@@ -24,7 +24,7 @@ function App() {
 
   const getModeFromLocalStorage = () => {
     const mode = localStorage.getItem('mode');
-    if (mode === null) localStorage.setItem('mode', true);
+    if (mode === null) localStorage.setItem('mode', false);
     else setModeInLocalStorage(mode);
   }
 

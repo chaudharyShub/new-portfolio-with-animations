@@ -11,7 +11,7 @@ function AnimationHero({ hero, text, to, arrow }) {
     const style = context.state.style;
 
     return (
-        <section className='section_1'>
+        <section className='section_1' data-aos="fade-up">
             <div className='home_inner'>
                 <Atropos
                     className="my-atropos"

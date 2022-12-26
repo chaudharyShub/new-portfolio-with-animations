@@ -36,7 +36,7 @@ function SelectedWork({ id, name, img, link }) {
 
     return (
         <div className='work_container' style={{ color: style.color, borderBottom: `1.5px solid ${style.color}` }}>
-            <div className='work' data-aos="fade-up" data-aos-offset={windowWidth > 1024 && 200}>
+            <div className='work' data-aos="fade-up" data-aos-offset={windowWidth >= 1024 && 200}>
                 <div className='work_left'>
                     <h5 style={{ color: style.color }}>{id}</h5>
                     <div className='work_left_text'>
