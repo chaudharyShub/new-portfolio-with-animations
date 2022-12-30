@@ -11,6 +11,7 @@ function Personal() {
     const windowWidth = window.innerWidth;
     const figmaLink = 'https://www.figma.com/file/TLg8T7F1sMvSJQSe6gYo1I/My-Portfolio?node-id=0%3A1&t=XJT8DWrQTksFDJxO-0';
 
+
     return (
         <section className='personal_main'>
             {
@@ -31,7 +32,7 @@ function Personal() {
                                         items.content.includes('|')
                                             ? items.content.split('|') &&
                                             <p>{a[0]}
-                                                <a href={figmaLink} target='_blank'>{a[1]}</a>
+                                                <a href={figmaLink} style={{ color: `${context.state.mode ? 'red' : ''}` }} target='_blank'>{a[1]}</a>
                                             </p>
                                             : <p>{items.content}</p>
                                     }

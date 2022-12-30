@@ -84,6 +84,7 @@
 
 .personal_bottom>p>a {
     text-decoration: underline;
+    text-transform: uppercase;
 }
 
 @media only screen and (min-width: 640px) {

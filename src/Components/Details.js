@@ -140,7 +140,7 @@ export const personalWork = [
         image2: algoexpert_2,
         link: 'https://chaudharyshub.github.io/AlgoExpert-CLone-React.Js/',
         heading: 'algoexpert clone',
-        content: "Created a clone website of online Interview preparing platform 'AlgoExpert.io' on React.JS and styled using custom CSS",
+        content: "Created a clone of landing page of online Interview preparing platform 'AlgoExpert.io' on React.JS and styled using custom CSS",
     },
     {
         sno: '02/',
@@ -156,7 +156,7 @@ export const personalWork = [
         image2: js_form_validation_work_b,
         link: 'https://form-validation-using-java-script.vercel.app/create-form',
         heading: 'js form validation',
-        content: "A CRUD app which JavaScript for form validation. On form submission data is stored inside the localStorage which can be edited and deleted later.",
+        content: "A CRUD app which use JavaScript for form validation. On form submission data is stored inside the localStorage which can be edited and deleted later.",
     },
     {
         sno: '04/',
@@ -172,7 +172,7 @@ export const personalWork = [
         image2: indian_shatabdi_news_b,
         link: 'http://www.chaudharyshubham.com/Indian%20Shatabdi%20news/index%20(news).html',
         heading: 'indian shatabdi news',
-        content: "Indian Shatabdi News news website fetches latest news updates from api provided by 'News API' using JavaScript's AJAX method.",
+        content: "Indian Shatabdi News news website which fetches latest news updates from api provided by 'News API' using JavaScript's AJAX method.",
     },
     {
         sno: '06/',
