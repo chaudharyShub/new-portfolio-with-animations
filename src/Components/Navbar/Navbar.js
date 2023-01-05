@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
 import { StateContext } from '../../App';
+import './Navbar.css';
 
 
 function Navbar() {
@@ -17,10 +17,15 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [hideMiddleHamburger, setHideMiddleHamburger] = useState(true);
 
+    useEffect(() => {
+        if (menuOpen) document.body.style.overflow = 'hidden';
+        else document.body.style.overflow = 'auto';
+    }, [menuOpen]);
+
     const show = (e) => {
         if (e.target.innerText === 'DARK MODE' || e.target.innerText === 'LIGHT MODE') return;
-        menuOpen ? setMenuOpen(false) : setMenuOpen(true);
-        hideMiddleHamburger ? setHideMiddleHamburger(false) : setHideMiddleHamburger(true);
+        setHideMiddleHamburger(!hideMiddleHamburger);
+        setMenuOpen(!menuOpen);
     }
 
     const handleClick = () => {
