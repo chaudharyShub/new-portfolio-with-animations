@@ -59,7 +59,13 @@ function SelectedWork({ id, name, img, link }) {
                 <div className='work_right' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <a style={{ color: style.color }} href={link} target='_blank'>
                         <div className='work_right_image_container'>
-                            <img className='thumbnail' src={img === null ? style.homeMyPortfolio : img} alt="algoexpert" />
+                            <img
+                                className='thumbnail'
+                                src={img === null
+                                    ? (id === '04/' ? style.homePokemon : style.homeMyPortfolio)
+                                    : img}
+                                alt="algoexpert"
+                            />
                         </div>
                         <p style={{ borderBottom: `2px solid ${color}` }}>{name}</p>
                     </a>

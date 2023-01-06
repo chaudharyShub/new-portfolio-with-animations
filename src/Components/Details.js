@@ -22,6 +22,7 @@ import glimpses_dark from '../images/glimpses_dark.webp';
 import contact_me_dark from '../images/contact_me_dark.webp';
 import selected_work_dark from '../images/selected_work_dark.webp';
 import footer_parallax_dark from '../images/footer_parallax_dark.webp';
+import pokemon_dark from '../images/pokemon_dark.webp';
 
 
 export const scrollToTop = () => {
@@ -101,7 +102,7 @@ export const mechanical_software = [
         className: 'software',
         h5: 'Software Engineer (intern)',
         company: 'Quokka Labs  •  Internship',
-        totalTime: '2 months  •  Noida',
+        totalTime: '4 months  •  Noida',
         years: 'Sep 2022 - Present'
     },
 ];
@@ -128,7 +129,7 @@ export const selectedWork = [
     {
         id: '04/',
         name: 'pokemon app',
-        image: pokemon,
+        image: null,
         link: 'https://pokemon-app-dusky-psi.vercel.app/home',
     },
 ];
@@ -260,10 +261,6 @@ export const homeHeroHeadingDark = {
         style: {
             fontStyle: 'italic',
             color: 'white',
-            //             background: linear-gradient(to right, #FF9933, white, #138808);
-            //             -webkit-background-clip: text;
-            //             -webkit-text-fill-color: transparent;
-            //             text-shadow: none;
         }
     },
 };
@@ -457,6 +454,7 @@ export const darkModeStyle = {
     homeHero: hero_dark,
     ellipse: ellipse_dark,
     homeMyPortfolio: my_react_portfolio_light,
+    homePokemon: pokemon_dark,
     workMyPortfolio: {
         a: my_react_portfolio_light,
         b: my_react_portfolio_light_b

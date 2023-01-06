@@ -8,6 +8,7 @@ import mechanical_software_arrow from '../../images/mechanical_software_arrow.sv
 import glimpse_light from '../../images/glimpse_light.webp';
 import footer_parallax from '../../images/footer_parallax.webp';
 import dark_mode from '../../images/dark_mode.png';
+import pokemon from '../../images/pokemon.webp'; 
 import { darkModeStyle } from '../Details';
 
 
@@ -21,6 +22,7 @@ export const initialState = {
         homeHero: hero_light,
         ellipse: ellipse_1,
         homeMyPortfolio: my_react_portfolio,
+        homePokemon: pokemon,
         workMyPortfolio: {
             a: my_react_portfolio,
             b: my_react_portfolio_b

@@ -190,7 +190,8 @@ function Home() {
                             mechanical_software.map(items => {
                                 if (items.className === 'arrow') {
                                     return <img key={items.id} src={style.mechanicalSoftwareArrow} alt="arrow" />
-                                } else {
+                                } 
+                                else {
                                     return (
                                         <div className={items.className} key={items.id}>
                                             <h5 style={{ borderBottom: `1px solid ${style.color}` }}>{items.h5}</h5>
