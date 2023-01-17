@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
-import AnimationHero from '../AnimationHero/AnimationHero';
+import AnimationHero from '../../Components/AnimationHero/AnimationHero';
 import {
     loadTopBar,
     scrollToTop,
     workHeroHeadingDark,
     workHeroHeadingLight
-} from '../Details';
+} from '../../Lib/Details';
 import { StateContext } from '../../App';
 import './Work.css';
 

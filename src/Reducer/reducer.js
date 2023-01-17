@@ -1,15 +1,15 @@
-import arrow from '../../images/arrow.svg';
-import ellipse_1 from '../../images/ellipse_1.webp';
-import hero_light from '../../images/hero_light.webp';
-import selected_work from '../../images/selected_work.webp';
-import my_react_portfolio from '../../images/my_react_portfolio.webp';
-import my_react_portfolio_b from '../../images/my_react_portfolio_b.webp';
-import mechanical_software_arrow from '../../images/mechanical_software_arrow.svg';
-import glimpse_light from '../../images/glimpse_light.webp';
-import footer_parallax from '../../images/footer_parallax.webp';
-import dark_mode from '../../images/dark_mode.png';
-import pokemon from '../../images/pokemon.webp'; 
-import { darkModeStyle } from '../Details';
+import arrow from '../images/arrow.svg';
+import ellipse_1 from '../images/ellipse_1.webp';
+import hero_light from '../images/hero_light.webp';
+import selected_work from '../images/selected_work.webp';
+import my_react_portfolio from '../images/my_react_portfolio.webp';
+import my_react_portfolio_b from '../images/my_react_portfolio_b.webp';
+import mechanical_software_arrow from '../images/mechanical_software_arrow.svg';
+import glimpse_light from '../images/glimpse_light.webp';
+import footer_parallax from '../images/footer_parallax.webp';
+import dark_mode from '../images/dark_mode.png';
+import pokemon from '../images/pokemon.webp'; 
+import { darkModeStyle } from '../Lib/Details';
 
 
 export const initialState = {

@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import black_arrow from '../../images/black_arrow.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import form_submit from '../../images/form_submit.svg';
-import { socialMedia } from '../Details';
+import { socialMedia } from '../../Lib/Details';
 import { StateContext } from '../../App';
 import 'react-toastify/dist/ReactToastify.css';
 import './Footer.css';

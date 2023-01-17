@@ -1,11 +1,11 @@
 import React, { createContext, useEffect, useReducer } from "react";
-import { initialState, reducer } from "./Components/Context/reducer";
-import AOS from 'aos';
+import { initialState, reducer } from "./Reducer/reducer";
 import Footer from "./Components/Footer/Footer";
 import Navbar from './Components/Navbar/Navbar';
-import Element from './Components/Routing/Element';
+import { disableTopLoadingBar, topLoadingBarInitialState } from "./Reducer/topLoadingBarDisableReducer";
+import Routes from "./Routes/Routes";
+import AOS from 'aos';
 import './App.css';
-import { disableTopLoadingBar, topLoadingBarInitialState } from "./Components/Context/topLoadingBarDisableReducer";
 
 export const StateContext = createContext();
 
@@ -57,7 +57,7 @@ function App() {
       <div className="app_main_outer" style={{ background: state.style.background }}>
         <Navbar />
         <div className="app_main">
-          <Element />
+          <Routes />
         </div>
         <Footer />
       </div>

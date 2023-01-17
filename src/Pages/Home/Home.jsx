@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
 import simpleParallax from 'simple-parallax-js';
-import AnimationHero from '../AnimationHero/AnimationHero';
-import SelectedWork from '../SelectedWork/SelectedWork';
+import AnimationHero from '../../Components/AnimationHero/AnimationHero';
+import SelectedWork from '../../Components/SelectedWork/SelectedWork';
 import { StateContext } from '../../App';
 import {
     follow_me,
@@ -15,7 +15,7 @@ import {
     animationBoxId,
     homeHeroHeadingDark,
     homeHeroHeadingLight
-} from '../Details';
+} from '../../Lib/Details';
 import './Home.css';
 import hero_me from '../../images/hero_me.webp';
 

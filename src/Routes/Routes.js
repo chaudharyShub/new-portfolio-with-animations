@@ -1,34 +1,29 @@
 import React from 'react';
-import { Navigate, useRoutes } from 'react-router-dom';
-import About from '../About/About';
-import Contact from '../Contact/Contact';
-import Home from '../Home/Home';
-import Personal from '../Work/Personal/Personal';
-import Professional from '../Work/Professional/Professional';
-import Work from '../Work/Work';
-import EmptyHome from './EmptyHome';
+import { Navigate, Outlet, useRoutes } from 'react-router-dom';
+import About from '../Pages/About/About';
+import Contact from '../Pages/Contact/Contact';
+import Home from '../Pages/Home/Home';
+import Personal from '../Pages/Work/Personal/Personal';
+import Professional from '../Pages/Work/Professional/Professional';
+import Work from '../Pages/Work/Work';
 
-function Element() {
+function Routes() {
 
     const routes = useRoutes([
         {
             path: '/',
-            element: <EmptyHome />,
+            element: <Outlet />,
             children: [
                 {
-                    path: '',
-                    element: <Navigate replace to="home" />
-                },
-                {
-                    path: '/home',
+                    path: 'home',
                     element: <Home />
                 },
                 {
-                    path: '/about',
+                    path: 'about',
                     element: <About />
                 },
                 {
-                    path: '/work',
+                    path: 'work',
                     element: <Work />,
                     children: [
                         {
@@ -46,7 +41,7 @@ function Element() {
                     ]
                 },
                 {
-                    path: '/contact',
+                    path: 'contact',
                     element: <Contact />
                 }
             ]
@@ -56,4 +51,4 @@ function Element() {
     return routes;
 }
 
-export default Element;
+export default Routes;

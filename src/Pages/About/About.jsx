@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import LoadingBar from 'react-top-loading-bar';
-import { scrollToTop, loadTopBar } from '../Details';
+import { scrollToTop, loadTopBar } from '../../Lib/Details';
 import about_me from '../../images/about_me.webp';
 import 'atropos/css'
 import './About.css';

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { StateContext } from '../../../App';
-import { personalWork } from '../../Details';
+import { personalWork } from '../../../Lib/Details';
 import './Personal.css';
 
 

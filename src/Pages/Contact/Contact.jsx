@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import LoadingBar from 'react-top-loading-bar';
-import AnimationHero from '../AnimationHero/AnimationHero';
-import { scrollToTop, loadTopBar, contactHeroHeadingLight, contactHeroHeadingDark } from '../Details';
+import AnimationHero from '../../Components/AnimationHero/AnimationHero';
+import { scrollToTop, loadTopBar, contactHeroHeadingLight, contactHeroHeadingDark } from '../../Lib/Details';
 import { StateContext } from '../../App';
 import './Contact.css';
 
