@@ -15,6 +15,10 @@ function Routes() {
             element: <Outlet />,
             children: [
                 {
+                    path: '',
+                    element: <Navigate replace to='home' />
+                },
+                {
                     path: 'home',
                     element: <Home />
                 },
