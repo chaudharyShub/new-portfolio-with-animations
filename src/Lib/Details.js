@@ -1,6 +1,6 @@
 import algoexpert from '../images/algoexpert.webp';
 import js_form_validation_ from '../images/js_form_validation_.webp';
-import pokemon from '../images/pokemon.webp';
+// import pokemon from '../images/pokemon.webp';
 import algoexpert_2 from '../images/algoexpert_2.webp';
 import my_react_portfolio_light from '../images/my_react_portfolio_light.webp';
 import my_react_portfolio_light_b from '../images/my_react_portfolio_light_b.webp';
@@ -100,9 +100,9 @@ export const mechanical_software = [
     {
         id: 3,
         className: 'software',
-        h5: 'Software Engineer (intern)',
-        company: 'Quokka Labs  •  Internship',
-        totalTime: '4 months  •  Noida',
+        h5: 'Software Engineer',
+        company: 'Quokka Labs  •  Associate',
+        totalTime: '5 months  •  Noida',
         years: 'Sep 2022 - Present'
     },
 ];
